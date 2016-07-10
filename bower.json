@@ -1,0 +1,37 @@
+{
+  "name": "angular-datetime-input",
+  "version": "0.1.3",
+  "authors": [
+    "Gleb <git@gleb.nl>"
+  ],
+  "description": "UI widget for datetime input, converted to an angular directive for your convenience.",
+  "main": [
+    "dist/datetime-input.js",
+    "dist/datetime-input.css"
+  ],
+  "moduleType": [],
+  "keywords": [
+    "angular",
+    "angularjs",
+    "directive",
+    "date",
+    "time",
+    "datetime",
+    "input",
+    "dateinput",
+    "timeinput"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/g1eb/angular-datetime-input",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.6",
+    "moment": "^2.13.0"
+  }
+}
