@@ -10,7 +10,7 @@ angular.module('g1b.datetime-input', []).
       handler: '&'
     },
     replace: true,
-    templateUrl: 'src/datetime-input.html',
+    templateUrl: './datetime-input.html',
     compile: function () {
       return {
         pre: function preLink() {},
