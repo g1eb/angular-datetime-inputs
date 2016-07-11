@@ -7,6 +7,8 @@ angular.module('g1b.datetime-input', []).
     restrict: 'E',
     scope: {
       datetime: '=',
+      date: '=',
+      time: '=',
       handler: '&'
     },
     replace: true,
@@ -42,6 +44,16 @@ angular.module('g1b.datetime-input', []).
           // Convert datetime object to moment.js if its not a moment object yet
           if ( scope.datetime && !scope.datetime._isAMomentObject ) {
             scope.datetime = moment(scope.datetime);
+          }
+
+          // Convert date object to moment.js if its not a moment object yet
+          if ( scope.date && !scope.date._isAMomentObject ) {
+            scope.date = moment(scope.date);
+          }
+
+          // Convert time object to moment.js if its not a moment object yet
+          if ( scope.time && !scope.time._isAMomentObject ) {
+            scope.time = moment(scope.time);
           }
 
           // Bind click events outside directive to close edit popover
