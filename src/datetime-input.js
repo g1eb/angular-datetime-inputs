@@ -39,14 +39,9 @@ angular.module('g1b.datetime-input', []).
             scope.handler();
           };
 
-          // Convert start datetime to moment.js if its not a moment object yet
-          if ( scope.start && !scope.start._isAMomentObject ) {
-            scope.start = moment(scope.start);
-          }
-
-          // Convert end datetime to moment.js if its not a moment object yet
-          if ( scope.end && !scope.end._isAMomentObject ) {
-            scope.end = moment(scope.end);
+          // Convert datetime object to moment.js if its not a moment object yet
+          if ( scope.datetime && !scope.datetime._isAMomentObject ) {
+            scope.datetime = moment(scope.datetime);
           }
 
           // Bind click events outside directive to close edit popover
