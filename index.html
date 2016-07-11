@@ -18,13 +18,13 @@
 <body ng-controller="MainCtrl">
 
   <h1>Datetime</h1>
-  <datetime-input datetime="datetime" handler="print(datetime)"></datetime-input>
+  <datetime-input datetime="now" handler="print(now)"></datetime-input>
 
   <h1>Date</h1>
-  <date-input date="datetime" handler="print(datetime)"></date-input>
+  <date-input date="now" handler="print(now)"></date-input>
 
   <h1>Time</h1>
-  <time-input time="datetime" handler="print(datetime)"></time-input>
+  <time-input time="now" handler="print(now)"></time-input>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.min.js" charset="utf-8"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.min.js" charset="utf-8"></script>
@@ -33,7 +33,7 @@
   <script>
     angular.module('ExampleApp', ['g1b.datetime-input']).
       controller('MainCtrl', function ($scope) {
-        $scope.datetime = moment();
+        $scope.now = moment();
         $scope.print = function (datetime) {
           console.log('datetime', datetime);
         };
