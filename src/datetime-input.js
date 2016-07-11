@@ -6,9 +6,9 @@ angular.module('g1b.datetime-input', []).
   return {
     restrict: 'E',
     scope: {
-      datetime: '=',
-      date: '=',
-      time: '=',
+      datetime: '=?',
+      date: '=?',
+      time: '=?',
       handler: '&'
     },
     replace: true,
