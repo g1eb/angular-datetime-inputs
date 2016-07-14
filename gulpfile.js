@@ -16,3 +16,7 @@ gulp.task('build', function () {
     .pipe(cssnano())
     .pipe(gulp.dest('./dist'));
 });
+
+gulp.task('watch', function() {
+  gulp.watch('src/**/*.+(js|html|css)', ['build']);
+});
