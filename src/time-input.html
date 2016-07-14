@@ -2,8 +2,8 @@
   <div class="datetime"
     ng-click="selectDate(datetime)"
     ng-class="{'active': !!selected }">
-    <div class="date">{{ datetime.format('DD MMMM YYYY') }}</div>
-    <div class="time">{{ datetime.format('HH : mm : ss') }}</div>
+    <div class="date">{{ time.format('DD MMMM YYYY') }}</div>
+    <div class="time">{{ time.format('HH : mm : ss') }}</div>
   </div>
   <div class="edit-popover" ng-show="!!selected">
     <div class="calendar-toggle"
