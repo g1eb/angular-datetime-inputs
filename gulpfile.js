@@ -1,3 +1,5 @@
+'use strict';
+
 var gulp = require('gulp');
 var embedTemplates = require('gulp-angular-embed-templates');
 var concat = require('gulp-concat');
