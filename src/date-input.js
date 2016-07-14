@@ -1,18 +1,18 @@
 'use strict';
 
 /**
- * Datetime directive (date and time input element)
+ * Date directive (date input element)
  */
 angular.module('g1b.datetime-input', []).
-directive('datetimeInput', ['$document', function ($document) {
+directive('dateInput', ['$document', function ($document) {
   return {
     restrict: 'E',
     scope: {
-      datetime: '=',
+      date: '=',
       handler: '&'
     },
     replace: true,
-    templateUrl: './datetime-input.html',
+    templateUrl: './date-input.html',
     compile: function () {
       return {
         pre: function preLink() {},
@@ -41,9 +41,9 @@ directive('datetimeInput', ['$document', function ($document) {
             scope.handler();
           };
 
-          // Convert datetime object to moment.js if its not a moment object yet
-          if ( scope.datetime && !scope.datetime._isAMomentObject ) {
-            scope.datetime = moment(scope.datetime);
+          // Convert date object to moment.js if its not a moment object yet
+          if ( scope.date && !scope.date._isAMomentObject ) {
+            scope.date = moment(scope.date);
           }
 
           // Bind click events outside directive to close edit popover
