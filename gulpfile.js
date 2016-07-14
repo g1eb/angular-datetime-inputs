@@ -14,6 +14,7 @@ gulp.task('build', function () {
     .pipe(gulp.dest('./dist'));
   gulp.src('src/*.css')
     .pipe(cssnano())
+    .pipe(concat('datetime-input.css'))
     .pipe(gulp.dest('./dist'));
 });
 
