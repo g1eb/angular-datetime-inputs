@@ -1,7 +1,7 @@
 /**
  * Time input styles
  */
-.datetime-input {
+.datetime-input.time {
   position: relative;
   width: 100%;
   height: auto;
@@ -27,7 +27,7 @@
 /**
  * Display time object
  */
-.datetime-input .datetime {
+.datetime-input.time .datetime {
   cursor: pointer;
   position: absolute;
   left: 0;
@@ -36,7 +36,7 @@
   background-color: #efefef;
   transition: background-color 0.25s ease-out;
 }
-.datetime-input .datetime .date {
+.datetime-input.time .datetime .date {
   color: #777;
   font-size: 1em;
   line-height: 1em;
@@ -44,14 +44,14 @@
   display: block;
   overflow: hidden;
 }
-.datetime-input .datetime .time {
+.datetime-input.time .datetime .time {
   font-size: 1.5em;
   line-height: 1.75em;
   display: block;
   overflow: hidden;
 }
-.datetime-input .datetime.active,
-.datetime-input .datetime:hover {
+.datetime-input.time .datetime.active,
+.datetime-input.time .datetime:hover {
   background-color: #ddd;
 }
 
@@ -59,7 +59,7 @@
 /**
  * Edit time popover
  */
-.datetime-input .edit-popover {
+.datetime-input.time .edit-popover {
   position: absolute;
   z-index: 5;
   top: 4.5em;
@@ -76,14 +76,14 @@
 /**
  * Timer
  */
-.datetime-input .timer {
+.datetime-input.time .timer {
   display: flex;
   justify-content: space-between;
   background-color: #fff;
 }
-.datetime-input .timer .timer-hours,
-.datetime-input .timer .timer-minutes,
-.datetime-input .timer .timer-seconds {
+.datetime-input.time .timer .timer-hours,
+.datetime-input.time .timer .timer-minutes,
+.datetime-input.time .timer .timer-seconds {
   cursor: default;
   width: 3em;
   display: inline-block;
@@ -91,9 +91,9 @@
   line-height: 1.5em;
   position: relative;
 }
-.datetime-input .timer .timer-hours .arrow,
-.datetime-input .timer .timer-minutes .arrow,
-.datetime-input .timer .timer-seconds .arrow {
+.datetime-input.time .timer .timer-hours .arrow,
+.datetime-input.time .timer .timer-minutes .arrow,
+.datetime-input.time .timer .timer-seconds .arrow {
   position: relative;
   color: #ddd;
   cursor: pointer;
@@ -102,9 +102,9 @@
   line-height: 1em;
   font-size: 0.75em;
 }
-.datetime-input .timer .timer-hours .arrow.arrow-up::before,
-.datetime-input .timer .timer-minutes .arrow.arrow-up::before,
-.datetime-input .timer .timer-seconds .arrow.arrow-up::before {
+.datetime-input.time .timer .timer-hours .arrow.arrow-up::before,
+.datetime-input.time .timer .timer-minutes .arrow.arrow-up::before,
+.datetime-input.time .timer .timer-seconds .arrow.arrow-up::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -114,14 +114,14 @@
   border-bottom: 0.5em solid #ddd;
   transition: border 0.25s ease-out;
 }
-.datetime-input .timer .timer-hours .arrow.arrow-up:hover::before,
-.datetime-input .timer .timer-minutes .arrow.arrow-up:hover::before,
-.datetime-input .timer .timer-seconds .arrow.arrow-up:hover::before {
+.datetime-input.time .timer .timer-hours .arrow.arrow-up:hover::before,
+.datetime-input.time .timer .timer-minutes .arrow.arrow-up:hover::before,
+.datetime-input.time .timer .timer-seconds .arrow.arrow-up:hover::before {
   border-bottom-color: #999;
 }
-.datetime-input .timer .timer-hours .arrow.arrow-down::before,
-.datetime-input .timer .timer-minutes .arrow.arrow-down::before,
-.datetime-input .timer .timer-seconds .arrow.arrow-down::before {
+.datetime-input.time .timer .timer-hours .arrow.arrow-down::before,
+.datetime-input.time .timer .timer-minutes .arrow.arrow-down::before,
+.datetime-input.time .timer .timer-seconds .arrow.arrow-down::before {
   content: "";
   position: absolute;
   top: 0;
@@ -131,12 +131,12 @@
   border-top: 0.5em solid #ddd;
   transition: border 0.25s ease-out;
 }
-.datetime-input .timer .timer-hours .arrow.arrow-down:hover::before,
-.datetime-input .timer .timer-minutes .arrow.arrow-down:hover::before,
-.datetime-input .timer .timer-seconds .arrow.arrow-down:hover::before {
+.datetime-input.time .timer .timer-hours .arrow.arrow-down:hover::before,
+.datetime-input.time .timer .timer-minutes .arrow.arrow-down:hover::before,
+.datetime-input.time .timer .timer-seconds .arrow.arrow-down:hover::before {
   border-top-color: #999;
 }
-.datetime-input .timer .timer-divider {
+.datetime-input.time .timer .timer-divider {
   font-size: 3em;
   line-height: 3em;
   -webkit-animation-name: blinker;

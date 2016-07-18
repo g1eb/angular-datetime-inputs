@@ -1,7 +1,7 @@
 /**
  * Date input styles
  */
-.datetime-input {
+.datetime-input.date {
   position: relative;
   width: 100%;
   height: auto;
@@ -27,7 +27,7 @@
 /**
  * Display date object
  */
-.datetime-input .datetime {
+.datetime-input.date .datetime {
   cursor: pointer;
   position: absolute;
   left: 0;
@@ -36,7 +36,7 @@
   background-color: #efefef;
   transition: background-color 0.25s ease-out;
 }
-.datetime-input .datetime .date {
+.datetime-input.date .datetime .time {
   color: #777;
   font-size: 1em;
   line-height: 1em;
@@ -44,14 +44,14 @@
   display: block;
   overflow: hidden;
 }
-.datetime-input .datetime .time {
+.datetime-input.date .datetime .date {
   font-size: 1.5em;
   line-height: 1.75em;
   display: block;
   overflow: hidden;
 }
-.datetime-input .datetime.active,
-.datetime-input .datetime:hover {
+.datetime-input.date .datetime.active,
+.datetime-input.date .datetime:hover {
   background-color: #ddd;
 }
 
@@ -59,7 +59,7 @@
 /**
  * Edit date popover
  */
-.datetime-input .edit-popover {
+.datetime-input.date .edit-popover {
   position: absolute;
   z-index: 5;
   top: 4.5em;
@@ -76,7 +76,7 @@
 /**
  * Calendar
  */
-.datetime-input .calendar-toggle {
+.datetime-input.date .calendar-toggle {
   width: 100%;
   color: #777;
   font-size: 1.5em;
@@ -84,7 +84,7 @@
   cursor: pointer;
   transition: background-color 0.25s ease-out;
 }
-.datetime-input .calendar-toggle::before {
+.datetime-input.date .calendar-toggle::before {
   content: "";
   display: block;
   position: absolute;
@@ -104,11 +104,11 @@
   -webkit-transform: rotate(-45deg);
   transition: background-color 0.25s ease-out;
 }
-.datetime-input .calendar-toggle:hover,
-.datetime-input .calendar-toggle:hover::before {
+.datetime-input.date .calendar-toggle:hover,
+.datetime-input.date .calendar-toggle:hover::before {
   background-color: #ddd;
 }
-.datetime-input .calendar .calendar-header {
+.datetime-input.date .calendar .calendar-header {
   cursor: default;
   background-color: #fff;
   position: relative;
@@ -116,20 +116,20 @@
   font-size: 1.5em;
   line-height: 2em;
 }
-.datetime-input .calendar .calendar-header .arrow {
+.datetime-input.date .calendar .calendar-header .arrow {
   display: inline-block;
   color: #ddd;
   cursor: pointer;
   line-height: 1.5em;
   font-size: 1.5em;
 }
-.datetime-input .calendar .calendar-header .arrow.arrow-left {
+.datetime-input.date .calendar .calendar-header .arrow.arrow-left {
   position: absolute;
   left: 0;
   width: 2em;
   height: 100%;
 }
-.datetime-input .calendar .calendar-header .arrow.arrow-left::before {
+.datetime-input.date .calendar .calendar-header .arrow.arrow-left::before {
   content: "";
   position: absolute;
   top: 15%;
@@ -139,16 +139,16 @@
   border-bottom: 0.5em solid transparent;
   transition: border 0.25s ease-out;
 }
-.datetime-input .calendar .calendar-header .arrow.arrow-left:hover::before {
+.datetime-input.date .calendar .calendar-header .arrow.arrow-left:hover::before {
   border-right-color: #999;
 }
-.datetime-input .calendar .calendar-header .arrow.arrow-right {
+.datetime-input.date .calendar .calendar-header .arrow.arrow-right {
   position: absolute;
   right: 0;
   width: 2em;
   height: 100%;
 }
-.datetime-input .calendar .calendar-header .arrow.arrow-right::before {
+.datetime-input.date .calendar .calendar-header .arrow.arrow-right::before {
   content: "";
   position: absolute;
   top: 15%;
@@ -158,13 +158,13 @@
   border-bottom: 0.5em solid transparent;
   transition: border 0.25s ease-out;
 }
-.datetime-input .calendar .calendar-header .arrow.arrow-right:hover::before {
+.datetime-input.date .calendar .calendar-header .arrow.arrow-right:hover::before {
   border-left-color: #999;
 }
-.datetime-input .calendar .calendar-body {
+.datetime-input.date .calendar .calendar-body {
   padding: 0.5em 0;
 }
-.datetime-input .calendar .calendar-body .weekdays {
+.datetime-input.date .calendar .calendar-body .weekdays {
   cursor: default;
   display: flex;
   justify-content: space-between;
@@ -174,15 +174,15 @@
   text-transform: uppercase;
   padding: 0 1em;
 }
-.datetime-input .calendar .calendar-body .weekdays .weekday {
+.datetime-input.date .calendar .calendar-body .weekdays .weekday {
   display: inline-block;
   width: 5em;
   height: 2.5em;
 }
-.datetime-input .calendar .calendar-body .weekdays .weekday {
+.datetime-input.date .calendar .calendar-body .weekdays .weekday {
   display: inline-block;
 }
-.datetime-input .calendar .calendar-body .week {
+.datetime-input.date .calendar .calendar-body .week {
   display: flex;
   justify-content: space-between;
   color: #777;
@@ -191,7 +191,7 @@
   letter-spacing: 1px;
   padding: 0.5em 1em;
 }
-.datetime-input .calendar .calendar-body .week .date {
+.datetime-input.date .calendar .calendar-body .week .date {
   display: inline-block;
   cursor: pointer;
   width: 2.5em;
