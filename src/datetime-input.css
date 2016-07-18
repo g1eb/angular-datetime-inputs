@@ -27,7 +27,7 @@
 /**
  * Start and end datetime objects
  */
-.datetime-input.datetime .datetime {
+.datetime-input.datetime .display {
   cursor: pointer;
   position: absolute;
   left: 0;
@@ -36,7 +36,7 @@
   background-color: #efefef;
   transition: background-color 0.25s ease-out;
 }
-.datetime-input.datetime .datetime .date {
+.datetime-input.datetime .display .date {
   color: #777;
   font-size: 1em;
   line-height: 1em;
@@ -44,14 +44,14 @@
   display: block;
   overflow: hidden;
 }
-.datetime-input.datetime .datetime .time {
+.datetime-input.datetime .display .time {
   font-size: 1.5em;
   line-height: 1.75em;
   display: block;
   overflow: hidden;
 }
-.datetime-input.datetime .datetime.active,
-.datetime-input.datetime .datetime:hover {
+.datetime-input.datetime .display.active,
+.datetime-input.datetime .display:hover {
   background-color: #ddd;
 }
 
