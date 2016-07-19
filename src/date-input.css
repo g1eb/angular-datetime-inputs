@@ -63,20 +63,15 @@
   border: 1px solid #aaa;
   box-sizing: border-box;
 }
-
-
-/**
- * Calendar
- */
-.datetime-input.date .calendar-toggle {
+.datetime-input.date .edit-popover .header {
   width: 100%;
   color: #777;
   font-size: 1.5em;
   line-height: 2em;
-  cursor: pointer;
+  cursor: default;
   transition: background-color 0.25s ease-out;
 }
-.datetime-input.date .calendar-toggle::before {
+.datetime-input.date .edit-popover .header::before {
   content: "";
   display: block;
   position: absolute;
@@ -96,10 +91,11 @@
   -webkit-transform: rotate(-45deg);
   transition: background-color 0.25s ease-out;
 }
-.datetime-input.date .calendar-toggle:hover,
-.datetime-input.date .calendar-toggle:hover::before {
-  background-color: #ddd;
-}
+
+
+/**
+ * Calendar
+ */
 .datetime-input.date .calendar .calendar-header {
   cursor: default;
   background-color: #fff;
