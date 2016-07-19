@@ -71,12 +71,7 @@
   border: 1px solid #aaa;
   box-sizing: border-box;
 }
-
-
-/**
- * Calendar
- */
-.datetime-input.datetime .calendar-toggle {
+.datetime-input.datetime .edit-popover .header {
   width: 100%;
   color: #777;
   font-size: 1.5em;
@@ -84,7 +79,7 @@
   cursor: pointer;
   transition: background-color 0.25s ease-out;
 }
-.datetime-input.datetime .calendar-toggle::before {
+.datetime-input.datetime .edit-popover .header::before {
   content: "";
   display: block;
   position: absolute;
@@ -104,10 +99,15 @@
   -webkit-transform: rotate(-45deg);
   transition: background-color 0.25s ease-out;
 }
-.datetime-input.datetime .calendar-toggle:hover,
-.datetime-input.datetime .calendar-toggle:hover::before {
+.datetime-input.datetime .edit-popover .header:hover,
+.datetime-input.datetime .edit-popover .header:hover::before {
   background-color: #ddd;
 }
+
+
+/**
+ * Calendar
+ */
 .datetime-input.datetime .calendar .calendar-header {
   cursor: default;
   background-color: #fff;
