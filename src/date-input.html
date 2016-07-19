@@ -5,11 +5,10 @@
     <div class="date">{{ date.format('DD MMMM YYYY') }}</div>
   </div>
   <div class="edit-popover" ng-show="!!selected">
-    <div class="calendar-toggle"
-      ng-click="calendar_active = !calendar_active">
+    <div class="calendar-toggle">
       {{ selected.format('DD MMMM YYYY') }}
     </div>
-    <div class="calendar" ng-show="!!calendar_active">
+    <div class="calendar">
       <div class="calendar-header">
         <div class="arrow arrow-left" ng-click="calendar.subtract(1, 'months')"></div>
         {{ calendar.format('MMMM') }}
