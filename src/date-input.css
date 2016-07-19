@@ -36,17 +36,9 @@
   background-color: #efefef;
   transition: background-color 0.25s ease-out;
 }
-.datetime-input.date .display .time {
-  color: #777;
-  font-size: 1em;
-  line-height: 1em;
-  margin-top: 0.5em;
-  display: block;
-  overflow: hidden;
-}
 .datetime-input.date .display .date {
-  font-size: 1.5em;
-  line-height: 1.75em;
+  font-size: 2em;
+  line-height: 2em;
   display: block;
   overflow: hidden;
 }
