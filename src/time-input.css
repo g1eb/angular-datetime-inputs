@@ -71,6 +71,38 @@
   border: 1px solid #aaa;
   box-sizing: border-box;
 }
+.datetime-input.datetime .edit-popover .header {
+  width: 100%;
+  color: #777;
+  font-size: 1.5em;
+  line-height: 2em;
+  cursor: pointer;
+  transition: background-color 0.25s ease-out;
+}
+.datetime-input.datetime .edit-popover .header::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: #efefef;
+  width: 1em;
+  height: 1em;
+  top: -0.55em;
+  left: 47.5%;
+  z-index: 2;
+  border-color: #aaa;
+  border-style: solid;
+  border-width: 1px 1px 0 0;
+  transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transition: background-color 0.25s ease-out;
+}
+.datetime-input.datetime .edit-popover .header:hover,
+.datetime-input.datetime .edit-popover .header:hover::before {
+  background-color: #ddd;
+}
 
 
 /**
