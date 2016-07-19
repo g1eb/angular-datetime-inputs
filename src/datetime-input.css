@@ -1,7 +1,7 @@
 /**
  * Datetime input styles
  */
-.datetime-input {
+.datetime-input.datetime {
   position: relative;
   width: 100%;
   height: auto;
@@ -27,7 +27,7 @@
 /**
  * Start and end datetime objects
  */
-.datetime-input .datetime {
+.datetime-input.datetime .display {
   cursor: pointer;
   position: absolute;
   left: 0;
@@ -36,7 +36,7 @@
   background-color: #efefef;
   transition: background-color 0.25s ease-out;
 }
-.datetime-input .datetime .date {
+.datetime-input.datetime .display .date {
   color: #777;
   font-size: 1em;
   line-height: 1em;
@@ -44,14 +44,14 @@
   display: block;
   overflow: hidden;
 }
-.datetime-input .datetime .time {
+.datetime-input.datetime .display .time {
   font-size: 1.5em;
   line-height: 1.75em;
   display: block;
   overflow: hidden;
 }
-.datetime-input .datetime.active,
-.datetime-input .datetime:hover {
+.datetime-input.datetime .display.active,
+.datetime-input.datetime .display:hover {
   background-color: #ddd;
 }
 
@@ -59,7 +59,7 @@
 /**
  * Edit datetime popover
  */
-.datetime-input .edit-popover {
+.datetime-input.datetime .edit-popover {
   position: absolute;
   z-index: 5;
   top: 4.5em;
@@ -71,12 +71,7 @@
   border: 1px solid #aaa;
   box-sizing: border-box;
 }
-
-
-/**
- * Calendar
- */
-.datetime-input .calendar-toggle {
+.datetime-input.datetime .edit-popover .header {
   width: 100%;
   color: #777;
   font-size: 1.5em;
@@ -84,7 +79,7 @@
   cursor: pointer;
   transition: background-color 0.25s ease-out;
 }
-.datetime-input .calendar-toggle::before {
+.datetime-input.datetime .edit-popover .header::before {
   content: "";
   display: block;
   position: absolute;
@@ -104,11 +99,16 @@
   -webkit-transform: rotate(-45deg);
   transition: background-color 0.25s ease-out;
 }
-.datetime-input .calendar-toggle:hover,
-.datetime-input .calendar-toggle:hover::before {
+.datetime-input.datetime .edit-popover .header:hover,
+.datetime-input.datetime .edit-popover .header:hover::before {
   background-color: #ddd;
 }
-.datetime-input .calendar .calendar-header {
+
+
+/**
+ * Calendar
+ */
+.datetime-input.datetime .calendar .calendar-header {
   cursor: default;
   background-color: #fff;
   position: relative;
@@ -116,20 +116,20 @@
   font-size: 1.5em;
   line-height: 2em;
 }
-.datetime-input .calendar .calendar-header .arrow {
+.datetime-input.datetime .calendar .calendar-header .arrow {
   display: inline-block;
   color: #ddd;
   cursor: pointer;
   line-height: 1.5em;
   font-size: 1.5em;
 }
-.datetime-input .calendar .calendar-header .arrow.arrow-left {
+.datetime-input.datetime .calendar .calendar-header .arrow.arrow-left {
   position: absolute;
   left: 0;
   width: 2em;
   height: 100%;
 }
-.datetime-input .calendar .calendar-header .arrow.arrow-left::before {
+.datetime-input.datetime .calendar .calendar-header .arrow.arrow-left::before {
   content: "";
   position: absolute;
   top: 15%;
@@ -139,16 +139,16 @@
   border-bottom: 0.5em solid transparent;
   transition: border 0.25s ease-out;
 }
-.datetime-input .calendar .calendar-header .arrow.arrow-left:hover::before {
+.datetime-input.datetime .calendar .calendar-header .arrow.arrow-left:hover::before {
   border-right-color: #999;
 }
-.datetime-input .calendar .calendar-header .arrow.arrow-right {
+.datetime-input.datetime .calendar .calendar-header .arrow.arrow-right {
   position: absolute;
   right: 0;
   width: 2em;
   height: 100%;
 }
-.datetime-input .calendar .calendar-header .arrow.arrow-right::before {
+.datetime-input.datetime .calendar .calendar-header .arrow.arrow-right::before {
   content: "";
   position: absolute;
   top: 15%;
@@ -158,13 +158,13 @@
   border-bottom: 0.5em solid transparent;
   transition: border 0.25s ease-out;
 }
-.datetime-input .calendar .calendar-header .arrow.arrow-right:hover::before {
+.datetime-input.datetime .calendar .calendar-header .arrow.arrow-right:hover::before {
   border-left-color: #999;
 }
-.datetime-input .calendar .calendar-body {
+.datetime-input.datetime .calendar .calendar-body {
   padding: 0.5em 0;
 }
-.datetime-input .calendar .calendar-body .weekdays {
+.datetime-input.datetime .calendar .calendar-body .weekdays {
   cursor: default;
   display: flex;
   justify-content: space-between;
@@ -174,15 +174,15 @@
   text-transform: uppercase;
   padding: 0 1em;
 }
-.datetime-input .calendar .calendar-body .weekdays .weekday {
+.datetime-input.datetime .calendar .calendar-body .weekdays .weekday {
   display: inline-block;
   width: 5em;
   height: 2.5em;
 }
-.datetime-input .calendar .calendar-body .weekdays .weekday {
+.datetime-input.datetime .calendar .calendar-body .weekdays .weekday {
   display: inline-block;
 }
-.datetime-input .calendar .calendar-body .week {
+.datetime-input.datetime .calendar .calendar-body .week {
   display: flex;
   justify-content: space-between;
   color: #777;
@@ -191,7 +191,7 @@
   letter-spacing: 1px;
   padding: 0.5em 1em;
 }
-.datetime-input .calendar .calendar-body .week .date {
+.datetime-input.datetime .calendar .calendar-body .week .date {
   display: inline-block;
   cursor: pointer;
   width: 2.5em;
@@ -199,18 +199,18 @@
   border-radius: 50%;
   transition: background-color 0.25s ease-out;
 }
-.datetime-input .calendar .calendar-body .week .date.current {
+.datetime-input.datetime .calendar .calendar-body .week .date.current {
   color: #444;
 }
-.datetime-input .calendar .calendar-body .week .date:not(.active):hover {
+.datetime-input.datetime .calendar .calendar-body .week .date:not(.active):hover {
   background-color: #ddd;
 }
-.datetime-input .calendar .calendar-body .week .date.active,
-.datetime-input .calendar .calendar-body .week .date.inactive.active {
+.datetime-input.datetime .calendar .calendar-body .week .date.active,
+.datetime-input.datetime .calendar .calendar-body .week .date.inactive.active {
   color: #efefef;
   background-color: rgba(255, 69, 0, 0.75);
 }
-.datetime-input .calendar .calendar-body .week .date.inactive {
+.datetime-input.datetime .calendar .calendar-body .week .date.inactive {
   color: #aaa;
 }
 
@@ -218,14 +218,14 @@
 /**
  * Timer
  */
-.datetime-input .timer {
+.datetime-input.datetime .timer {
   display: flex;
   justify-content: space-between;
   background-color: #fff;
 }
-.datetime-input .timer .timer-hours,
-.datetime-input .timer .timer-minutes,
-.datetime-input .timer .timer-seconds {
+.datetime-input.datetime .timer .timer-hours,
+.datetime-input.datetime .timer .timer-minutes,
+.datetime-input.datetime .timer .timer-seconds {
   cursor: default;
   width: 3em;
   display: inline-block;
@@ -233,9 +233,9 @@
   line-height: 1.5em;
   position: relative;
 }
-.datetime-input .timer .timer-hours .arrow,
-.datetime-input .timer .timer-minutes .arrow,
-.datetime-input .timer .timer-seconds .arrow {
+.datetime-input.datetime .timer .timer-hours .arrow,
+.datetime-input.datetime .timer .timer-minutes .arrow,
+.datetime-input.datetime .timer .timer-seconds .arrow {
   position: relative;
   color: #ddd;
   cursor: pointer;
@@ -244,9 +244,9 @@
   line-height: 1em;
   font-size: 0.75em;
 }
-.datetime-input .timer .timer-hours .arrow.arrow-up::before,
-.datetime-input .timer .timer-minutes .arrow.arrow-up::before,
-.datetime-input .timer .timer-seconds .arrow.arrow-up::before {
+.datetime-input.datetime .timer .timer-hours .arrow.arrow-up::before,
+.datetime-input.datetime .timer .timer-minutes .arrow.arrow-up::before,
+.datetime-input.datetime .timer .timer-seconds .arrow.arrow-up::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -256,14 +256,14 @@
   border-bottom: 0.5em solid #ddd;
   transition: border 0.25s ease-out;
 }
-.datetime-input .timer .timer-hours .arrow.arrow-up:hover::before,
-.datetime-input .timer .timer-minutes .arrow.arrow-up:hover::before,
-.datetime-input .timer .timer-seconds .arrow.arrow-up:hover::before {
+.datetime-input.datetime .timer .timer-hours .arrow.arrow-up:hover::before,
+.datetime-input.datetime .timer .timer-minutes .arrow.arrow-up:hover::before,
+.datetime-input.datetime .timer .timer-seconds .arrow.arrow-up:hover::before {
   border-bottom-color: #999;
 }
-.datetime-input .timer .timer-hours .arrow.arrow-down::before,
-.datetime-input .timer .timer-minutes .arrow.arrow-down::before,
-.datetime-input .timer .timer-seconds .arrow.arrow-down::before {
+.datetime-input.datetime .timer .timer-hours .arrow.arrow-down::before,
+.datetime-input.datetime .timer .timer-minutes .arrow.arrow-down::before,
+.datetime-input.datetime .timer .timer-seconds .arrow.arrow-down::before {
   content: "";
   position: absolute;
   top: 0;
@@ -273,12 +273,12 @@
   border-top: 0.5em solid #ddd;
   transition: border 0.25s ease-out;
 }
-.datetime-input .timer .timer-hours .arrow.arrow-down:hover::before,
-.datetime-input .timer .timer-minutes .arrow.arrow-down:hover::before,
-.datetime-input .timer .timer-seconds .arrow.arrow-down:hover::before {
+.datetime-input.datetime .timer .timer-hours .arrow.arrow-down:hover::before,
+.datetime-input.datetime .timer .timer-minutes .arrow.arrow-down:hover::before,
+.datetime-input.datetime .timer .timer-seconds .arrow.arrow-down:hover::before {
   border-top-color: #999;
 }
-.datetime-input .timer .timer-divider {
+.datetime-input.datetime .timer .timer-divider {
   font-size: 3em;
   line-height: 3em;
   -webkit-animation-name: blinker;

@@ -1,0 +1,203 @@
+/**
+ * Date input styles
+ */
+.datetime-input.date {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 4em;
+  margin: 0;
+  padding: 0;
+  color: #444;
+  font-size: 14px;
+  font-family: sans-serif;
+  text-decoration: none;
+  text-align: center;
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+
+/**
+ * Display date object
+ */
+.datetime-input.date .display {
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 4em;
+  background-color: #efefef;
+  transition: background-color 0.25s ease-out;
+}
+.datetime-input.date .display .date {
+  font-size: 2em;
+  line-height: 2em;
+  display: block;
+  overflow: hidden;
+}
+.datetime-input.date .display.active,
+.datetime-input.date .display:hover {
+  background-color: #ddd;
+}
+
+
+/**
+ * Edit date popover
+ */
+.datetime-input.date .edit-popover {
+  position: absolute;
+  z-index: 5;
+  top: 4.5em;
+  width: 100%;
+  height: auto;
+  padding: 0;
+  background-color: #efefef;
+  border-radius: 0;
+  border: 1px solid #aaa;
+  box-sizing: border-box;
+}
+.datetime-input.date .edit-popover .header {
+  width: 100%;
+  color: #777;
+  font-size: 1.5em;
+  line-height: 2em;
+  cursor: default;
+  transition: background-color 0.25s ease-out;
+}
+.datetime-input.date .edit-popover .header::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: #efefef;
+  width: 1em;
+  height: 1em;
+  top: -0.55em;
+  left: 47.5%;
+  z-index: 2;
+  border-color: #aaa;
+  border-style: solid;
+  border-width: 1px 1px 0 0;
+  transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transition: background-color 0.25s ease-out;
+}
+
+
+/**
+ * Calendar
+ */
+.datetime-input.date .calendar .calendar-header {
+  cursor: default;
+  background-color: #fff;
+  position: relative;
+  width: 100%;
+  font-size: 1.5em;
+  line-height: 2em;
+}
+.datetime-input.date .calendar .calendar-header .arrow {
+  display: inline-block;
+  color: #ddd;
+  cursor: pointer;
+  line-height: 1.5em;
+  font-size: 1.5em;
+}
+.datetime-input.date .calendar .calendar-header .arrow.arrow-left {
+  position: absolute;
+  left: 0;
+  width: 2em;
+  height: 100%;
+}
+.datetime-input.date .calendar .calendar-header .arrow.arrow-left::before {
+  content: "";
+  position: absolute;
+  top: 15%;
+  left: 25%;
+  border-right: 0.75em solid #ddd;
+  border-top: 0.5em solid transparent;
+  border-bottom: 0.5em solid transparent;
+  transition: border 0.25s ease-out;
+}
+.datetime-input.date .calendar .calendar-header .arrow.arrow-left:hover::before {
+  border-right-color: #999;
+}
+.datetime-input.date .calendar .calendar-header .arrow.arrow-right {
+  position: absolute;
+  right: 0;
+  width: 2em;
+  height: 100%;
+}
+.datetime-input.date .calendar .calendar-header .arrow.arrow-right::before {
+  content: "";
+  position: absolute;
+  top: 15%;
+  right: 25%;
+  border-left: 0.75em solid #ddd;
+  border-top: 0.5em solid transparent;
+  border-bottom: 0.5em solid transparent;
+  transition: border 0.25s ease-out;
+}
+.datetime-input.date .calendar .calendar-header .arrow.arrow-right:hover::before {
+  border-left-color: #999;
+}
+.datetime-input.date .calendar .calendar-body {
+  padding: 0.5em 0;
+}
+.datetime-input.date .calendar .calendar-body .weekdays {
+  cursor: default;
+  display: flex;
+  justify-content: space-between;
+  color: #777;
+  font-size: 1em;
+  line-height: 2em;
+  text-transform: uppercase;
+  padding: 0 1em;
+}
+.datetime-input.date .calendar .calendar-body .weekdays .weekday {
+  display: inline-block;
+  width: 5em;
+  height: 2.5em;
+}
+.datetime-input.date .calendar .calendar-body .weekdays .weekday {
+  display: inline-block;
+}
+.datetime-input.date .calendar .calendar-body .week {
+  display: flex;
+  justify-content: space-between;
+  color: #777;
+  font-size: 1.25em;
+  line-height: 2.65em;
+  letter-spacing: 1px;
+  padding: 0.5em 1em;
+}
+.datetime-input.date .calendar .calendar-body .week .date {
+  display: inline-block;
+  cursor: pointer;
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 50%;
+  transition: background-color 0.25s ease-out;
+}
+.datetime-input.date .calendar .calendar-body .week .date.current {
+  color: #444;
+}
+.datetime-input.date .calendar .calendar-body .week .date:not(.active):hover {
+  background-color: #ddd;
+}
+.datetime-input.date .calendar .calendar-body .week .date.active,
+.datetime-input.date .calendar .calendar-body .week .date.inactive.active {
+  color: #efefef;
+  background-color: rgba(255, 69, 0, 0.75);
+}
+.datetime-input.date .calendar .calendar-body .week .date.inactive {
+  color: #aaa;
+}

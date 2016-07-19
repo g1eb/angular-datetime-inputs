@@ -1,18 +1,18 @@
 'use strict';
 
 /**
- * Datetime directive (date and time input element)
+ * Date directive (date input element)
  */
-angular.module('g1b.datetime-input', []).
-directive('datetimeInput', ['$document', function ($document) {
+angular.module('g1b.datetime-input').
+directive('dateInput', ['$document', function ($document) {
   return {
     restrict: 'E',
     scope: {
-      datetime: '=',
+      date: '=',
       handler: '&'
     },
     replace: true,
-    templateUrl: './datetime-input.html',
+    templateUrl: './date-input.html',
     compile: function () {
       return {
         pre: function preLink() {},
@@ -35,15 +35,15 @@ directive('datetimeInput', ['$document', function ($document) {
           scope.setDate = function (date, calendar_update) {
             if ( scope.selected.isSame(date) ) { return; }
             scope.selected.year(date.year()).month(date.month()).date(date.date()).hours(date.hours()).minutes(date.minutes()).seconds(date.seconds());
-            if ( (scope.selected.clone().startOf('week').month() !== scope.calendar.month() && scope.selected.clone().endOf('week').month() !== scope.calendar.month()) || calendar_update ) {
+            if ( scope.selected.clone().startOf('week').month() !== scope.calendar.month() || calendar_update ) {
               scope.calendar = scope.selected.clone();
             }
             scope.handler();
           };
 
-          // Convert datetime object to moment.js if its not a moment object yet
-          if ( scope.datetime && !scope.datetime._isAMomentObject ) {
-            scope.datetime = moment(scope.datetime);
+          // Convert date object to moment.js if its not a moment object yet
+          if ( scope.date && !scope.date._isAMomentObject ) {
+            scope.date = moment(scope.date);
           }
 
           // Bind click events outside directive to close edit popover

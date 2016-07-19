@@ -1,16 +1,14 @@
-<div class="datetime-input datetime">
+<div class="datetime-input date">
   <div class="display"
-    ng-click="selectDate(datetime)"
+    ng-click="selectDate(date)"
     ng-class="{'active': !!selected }">
-    <div class="date">{{ datetime.format('DD MMMM YYYY') }}</div>
-    <div class="time">{{ datetime.format('HH : mm : ss') }}</div>
+    <div class="date">{{ date.format('DD MMMM YYYY') }}</div>
   </div>
   <div class="edit-popover" ng-show="!!selected">
-    <div class="header"
-      ng-click="calendar_active = !calendar_active">
+    <div class="header">
       {{ selected.format('DD MMMM YYYY') }}
     </div>
-    <div class="calendar" ng-show="!!calendar_active">
+    <div class="calendar">
       <div class="calendar-header">
         <div class="arrow arrow-left" ng-click="calendar.subtract(1, 'months')"></div>
         {{ calendar.format('MMMM') }}
@@ -33,25 +31,6 @@
             {{ calendar.clone().startOf('month').add($parent.$index, 'weeks').weekday($index).date() }}
           </span>
         </div>
-      </div>
-    </div>
-    <div class="timer">
-      <div class="timer-hours">
-        <div class="arrow arrow-up" ng-click="setDate(selected.clone().add(1, 'hours'))"></div>
-        {{ selected.format('HH') }}
-        <div class="arrow arrow-down" ng-click="setDate(selected.clone().subtract(1, 'hours'))"></div>
-      </div>
-      <div class="timer-divider">:</div>
-      <div class="timer-minutes">
-        <div class="arrow arrow-up" ng-click="setDate(selected.clone().add(1, 'minutes'))"></div>
-        {{ selected.format('mm') }}
-        <div class="arrow arrow-down" ng-click="setDate(selected.clone().subtract(1, 'minutes'))"></div>
-      </div>
-      <div class="timer-divider">:</div>
-      <div class="timer-seconds">
-        <div class="arrow arrow-up" ng-click="setDate(selected.clone().add(1, 'seconds'))"></div>
-        {{ selected.format('ss') }}
-        <div class="arrow arrow-down" ng-click="setDate(selected.clone().subtract(1, 'seconds'))"></div>
       </div>
     </div>
   </div>
