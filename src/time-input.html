@@ -1,6 +1,6 @@
 <div class="datetime-input time">
   <div class="display"
-    ng-click="selectDate(datetime)"
+    ng-click="selected = (selected === time) ? '' : time"
     ng-class="{'active': !!selected }">
     <div class="time">{{ time.format('HH : mm : ss') }}</div>
   </div>
