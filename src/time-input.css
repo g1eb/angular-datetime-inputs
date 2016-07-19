@@ -71,15 +71,15 @@
   border: 1px solid #aaa;
   box-sizing: border-box;
 }
-.datetime-input.datetime .edit-popover .header {
+.datetime-input.time .edit-popover .header {
   width: 100%;
   color: #777;
   font-size: 1.5em;
   line-height: 2em;
-  cursor: pointer;
+  cursor: default;
   transition: background-color 0.25s ease-out;
 }
-.datetime-input.datetime .edit-popover .header::before {
+.datetime-input.time .edit-popover .header::before {
   content: "";
   display: block;
   position: absolute;
@@ -98,10 +98,6 @@
   -o-transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
   transition: background-color 0.25s ease-out;
-}
-.datetime-input.datetime .edit-popover .header:hover,
-.datetime-input.datetime .edit-popover .header:hover::before {
-  background-color: #ddd;
 }
 
 
