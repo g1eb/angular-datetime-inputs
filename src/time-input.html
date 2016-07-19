@@ -2,7 +2,6 @@
   <div class="display"
     ng-click="selectDate(datetime)"
     ng-class="{'active': !!selected }">
-    <div class="date">{{ time.format('DD MMMM YYYY') }}</div>
     <div class="time">{{ time.format('HH : mm : ss') }}</div>
   </div>
   <div class="edit-popover" ng-show="!!selected">
