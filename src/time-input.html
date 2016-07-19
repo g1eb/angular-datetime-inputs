@@ -10,21 +10,21 @@
     </div>
     <div class="timer">
       <div class="timer-hours">
-        <div class="arrow arrow-up" ng-click="setDate(selected.clone().add(1, 'hours'))"></div>
+        <div class="arrow arrow-up" ng-click="selected.add(1, 'hours') && handler()"></div>
         {{ selected.format('HH') }}
-        <div class="arrow arrow-down" ng-click="setDate(selected.clone().subtract(1, 'hours'))"></div>
+        <div class="arrow arrow-down" ng-click="selected.subtract(1, 'hours') && handler()"></div>
       </div>
       <div class="timer-divider">:</div>
       <div class="timer-minutes">
-        <div class="arrow arrow-up" ng-click="setDate(selected.clone().add(1, 'minutes'))"></div>
+        <div class="arrow arrow-up" ng-click="selected.add(1, 'minutes') && handler()"></div>
         {{ selected.format('mm') }}
-        <div class="arrow arrow-down" ng-click="setDate(selected.clone().subtract(1, 'minutes'))"></div>
+        <div class="arrow arrow-down" ng-click="selected.subtract(1, 'minutes') && handler()"></div>
       </div>
       <div class="timer-divider">:</div>
       <div class="timer-seconds">
-        <div class="arrow arrow-up" ng-click="setDate(selected.clone().add(1, 'seconds'))"></div>
+        <div class="arrow arrow-up" ng-click="selected.add(1, 'seconds') && handler()"></div>
         {{ selected.format('ss') }}
-        <div class="arrow arrow-down" ng-click="setDate(selected.clone().subtract(1, 'seconds'))"></div>
+        <div class="arrow arrow-down" ng-click="selected.subtract(1, 'seconds') && handler()"></div>
       </div>
     </div>
   </div>
