@@ -9,7 +9,9 @@ directive('datetimeInput', ['$document', function ($document) {
     restrict: 'E',
     scope: {
       datetime: '=',
-      handler: '&'
+      handler: '&',
+      placeholder: '@',
+      clearable: '&'
     },
     replace: true,
     templateUrl: './datetime-input.html',
@@ -18,13 +20,16 @@ directive('datetimeInput', ['$document', function ($document) {
         pre: function preLink() {},
         post: function postLink(scope, element) {
 
+          scope.clearable = scope.clearable();
+
           // Get current date
           scope.current = moment();
 
           // Set selected date
           scope.selectDate = function (date) {
-            if ( scope.selected === date ) {
-              scope.selected = undefined;
+            if(!date) {
+              scope.selected = moment();
+              scope.calendar = scope.selected.clone();
             } else {
               scope.selected = date;
               scope.calendar = scope.selected.clone();
@@ -38,8 +43,14 @@ directive('datetimeInput', ['$document', function ($document) {
             if ( (scope.selected.clone().startOf('week').month() !== scope.calendar.month() && scope.selected.clone().endOf('week').month() !== scope.calendar.month()) || calendar_update ) {
               scope.calendar = scope.selected.clone();
             }
+            scope.datetime = scope.selected;
             scope.handler();
           };
+
+          scope.clear = function() {
+            scope.datetime = undefined;
+          }
+
 
           // Convert datetime object to moment.js if its not a moment object yet
           if ( scope.datetime && !scope.datetime._isAMomentObject ) {

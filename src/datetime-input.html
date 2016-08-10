@@ -2,8 +2,15 @@
   <div class="display"
     ng-click="selectDate(datetime)"
     ng-class="{'active': !!selected }">
-    <div class="date">{{ datetime.format('DD MMMM YYYY') }}</div>
-    <div class="time">{{ datetime.format('HH : mm : ss') }}</div>
+    <div ng-if="datetime">
+      <div class="date">{{ datetime.format('DD MMMM YYYY') }}</div>
+      <div class="time">{{ datetime.format('HH : mm : ss') }}</div>
+    </div>
+    <div ng-if="!datetime">
+      <div class="placeholder">
+        {{ placeholder }}
+      </div>
+    </div>
   </div>
   <div class="edit-popover" ng-show="!!selected">
     <div class="header"
@@ -53,6 +60,9 @@
         {{ selected.format('ss') }}
         <div class="arrow arrow-down" ng-click="setDate(selected.clone().subtract(1, 'seconds'))"></div>
       </div>
+    </div>
+    <div ng-if="clearable">
+        <button ng-click="clear()" class="clear-button">Clear</button>
     </div>
   </div>
 </div>

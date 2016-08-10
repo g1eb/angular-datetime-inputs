@@ -44,6 +44,12 @@
   display: block;
   overflow: hidden;
 }
+.datetime-input.datetime .display .placeholder {
+  font-size: 2em;
+  line-height: 2em;
+  display: block;
+  overflow: hidden;
+}
 .datetime-input.datetime .display .time {
   font-size: 1.5em;
   line-height: 1.75em;
@@ -101,6 +107,27 @@
 }
 .datetime-input.datetime .edit-popover .header:hover,
 .datetime-input.datetime .edit-popover .header:hover::before {
+  background-color: #ddd;
+}
+
+
+/**
+ * Clear button
+ */
+.datetime-input.datetime .clear-button {
+  border: none;
+  float: right;
+  color: #444;
+  background-color: white;
+  background-color: #efefef;
+  border: 1px solid black;
+  font-size: 22px;
+  margin-bottom: -40px;
+  margin-right: -1px;
+  padding: 0 12px;
+  height: 40px;
+}
+.datetime-input.datetime .clear-button:hover {
   background-color: #ddd;
 }
 
