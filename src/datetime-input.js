@@ -4,7 +4,7 @@
  * Datetime directive (date and time input element)
  */
 angular.module('g1b.datetime-input', []).
-directive('datetimeInput', ['$document', function ($document) {
+directive('datetimeInput', ['$document', '$timeout', function ($document, $timeout) {
   return {
     restrict: 'E',
     scope: {
@@ -27,13 +27,12 @@ directive('datetimeInput', ['$document', function ($document) {
 
           // Set selected date
           scope.selectDate = function (date) {
-            if(!date) {
+            if (!date && !scope.selected) {
               scope.selected = moment();
-              scope.calendar = scope.selected.clone();
-            } else {
+            } else if(date) {
               scope.selected = date;
-              scope.calendar = scope.selected.clone();
             }
+            scope.calendar = scope.selected.clone();
           };
 
           // Update selected date
@@ -44,12 +43,18 @@ directive('datetimeInput', ['$document', function ($document) {
               scope.calendar = scope.selected.clone();
             }
             scope.datetime = scope.selected;
-            scope.handler();
+            $timeout(function() {
+              scope.handler();
+            });
           };
 
           scope.clear = function() {
-            scope.datetime = undefined;
-          }
+              scope.datetime = undefined;
+              scope.selected = undefined;
+              $timeout(function() {
+                scope.handler();
+              });
+          };
 
 
           // Convert datetime object to moment.js if its not a moment object yet
