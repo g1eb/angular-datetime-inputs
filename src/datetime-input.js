@@ -4,12 +4,14 @@
  * Datetime directive (date and time input element)
  */
 angular.module('g1b.datetime-input', []).
-directive('datetimeInput', ['$document', function ($document) {
+directive('datetimeInput', ['$document', '$timeout', function ($document, $timeout) {
   return {
     restrict: 'E',
     scope: {
       datetime: '=',
-      handler: '&'
+      handler: '&',
+      placeholder: '@',
+      clearable: '&'
     },
     replace: true,
     templateUrl: './datetime-input.html',
@@ -18,17 +20,19 @@ directive('datetimeInput', ['$document', function ($document) {
         pre: function preLink() {},
         post: function postLink(scope, element) {
 
+          scope.clearable = scope.clearable();
+
           // Get current date
           scope.current = moment();
 
           // Set selected date
           scope.selectDate = function (date) {
-            if ( scope.selected === date ) {
-              scope.selected = undefined;
-            } else {
+            if (!date && !scope.selected) {
+              scope.selected = moment();
+            } else if(date) {
               scope.selected = date;
-              scope.calendar = scope.selected.clone();
             }
+            scope.calendar = scope.selected.clone();
           };
 
           // Update selected date
@@ -38,8 +42,20 @@ directive('datetimeInput', ['$document', function ($document) {
             if ( (scope.selected.clone().startOf('week').month() !== scope.calendar.month() && scope.selected.clone().endOf('week').month() !== scope.calendar.month()) || calendar_update ) {
               scope.calendar = scope.selected.clone();
             }
-            scope.handler();
+            scope.datetime = scope.selected;
+            $timeout(function() {
+              scope.handler();
+            });
           };
+
+          scope.clear = function() {
+              scope.datetime = undefined;
+              scope.selected = undefined;
+              $timeout(function() {
+                scope.handler();
+              });
+          };
+
 
           // Convert datetime object to moment.js if its not a moment object yet
           if ( scope.datetime && !scope.datetime._isAMomentObject ) {
