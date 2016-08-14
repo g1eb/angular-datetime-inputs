@@ -22,14 +22,14 @@ directive('datetimeInput', ['$document', function ($document) {
           // Get current date
           scope.current = moment();
 
-          // Set selected date
-          scope.selectDate = function (date) {
-            if (!date && !scope.selected) {
-              scope.selected = moment();
-            } else if(date) {
-              scope.selected = date;
+          // Toggle edit popover
+          scope.toggleEditPopover = function () {
+            if ( !!scope.selected ) {
+              scope.selected = undefined;
+            } else {
+              scope.selected = scope.datetime || moment();
+              scope.calendar = scope.selected.clone();
             }
-            scope.calendar = scope.selected.clone();
           };
 
           // Update selected date

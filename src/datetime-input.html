@@ -1,6 +1,6 @@
 <div class="datetime-input datetime">
   <div class="display"
-    ng-click="selectDate(datetime)"
+    ng-click="toggleEditPopover()"
     ng-class="{'active': !!selected }">
     <div class="date">{{ datetime.format('DD MMMM YYYY') }}</div>
     <div class="time">{{ datetime.format('HH : mm : ss') }}</div>
