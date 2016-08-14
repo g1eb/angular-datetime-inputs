@@ -29,7 +29,7 @@ directive('timeInput', ['$document', function ($document) {
           };
 
           // Update selected time
-          scope.setDate = function (datetime, calendar_update) {
+          scope.update = function (datetime, calendar_update) {
             if ( scope.selected.isSame(datetime) ) { return; }
             if ( !datetime ) {
               scope.selected = scope.time = undefined;

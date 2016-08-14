@@ -30,7 +30,7 @@
               'active': calendar.clone().startOf('month').add($parent.$index, 'weeks').weekday($index).startOf('day').isSame(selected.clone().startOf('day')),
               'inactive': calendar.clone().startOf('month').add($parent.$index, 'weeks').weekday($index).month() !== calendar.month()
             }"
-            ng-click="setDate(selected.clone().year(calendar.clone().startOf('month').add($parent.$index, 'weeks').weekday($index).year()).month(calendar.clone().startOf('month').add($parent.$index, 'weeks').weekday($index).month()).date(calendar.clone().startOf('month').add($parent.$index, 'weeks').weekday($index).date()), true)">
+            ng-click="update(selected.clone().year(calendar.clone().startOf('month').add($parent.$index, 'weeks').weekday($index).year()).month(calendar.clone().startOf('month').add($parent.$index, 'weeks').weekday($index).month()).date(calendar.clone().startOf('month').add($parent.$index, 'weeks').weekday($index).date()), true)">
             {{ calendar.clone().startOf('month').add($parent.$index, 'weeks').weekday($index).date() }}
           </span>
         </div>
@@ -38,25 +38,25 @@
     </div>
     <div class="timer">
       <div class="timer-hours">
-        <div class="arrow arrow-up" ng-click="setDate(selected.clone().add(1, 'hours'))"></div>
+        <div class="arrow arrow-up" ng-click="update(selected.clone().add(1, 'hours'))"></div>
         {{ selected.format('HH') }}
-        <div class="arrow arrow-down" ng-click="setDate(selected.clone().subtract(1, 'hours'))"></div>
+        <div class="arrow arrow-down" ng-click="update(selected.clone().subtract(1, 'hours'))"></div>
       </div>
       <div class="timer-divider">:</div>
       <div class="timer-minutes">
-        <div class="arrow arrow-up" ng-click="setDate(selected.clone().add(1, 'minutes'))"></div>
+        <div class="arrow arrow-up" ng-click="update(selected.clone().add(1, 'minutes'))"></div>
         {{ selected.format('mm') }}
-        <div class="arrow arrow-down" ng-click="setDate(selected.clone().subtract(1, 'minutes'))"></div>
+        <div class="arrow arrow-down" ng-click="update(selected.clone().subtract(1, 'minutes'))"></div>
       </div>
       <div class="timer-divider">:</div>
       <div class="timer-seconds">
-        <div class="arrow arrow-up" ng-click="setDate(selected.clone().add(1, 'seconds'))"></div>
+        <div class="arrow arrow-up" ng-click="update(selected.clone().add(1, 'seconds'))"></div>
         {{ selected.format('ss') }}
-        <div class="arrow arrow-down" ng-click="setDate(selected.clone().subtract(1, 'seconds'))"></div>
+        <div class="arrow arrow-down" ng-click="update(selected.clone().subtract(1, 'seconds'))"></div>
       </div>
     </div>
     <div class="clear-button" ng-if="!!datetime">
-      <div ng-click="setDate()">Clear</div>
+      <div ng-click="update()">Clear</div>
     </div>
   </div>
 </div>
