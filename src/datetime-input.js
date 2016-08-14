@@ -36,7 +36,7 @@ directive('datetimeInput', ['$document', function ($document) {
           scope.setDate = function (date, calendar_update) {
             if ( scope.selected.isSame(date) ) { return; }
             if ( !date ) {
-              scope.selected = undefined;
+              scope.selected = scope.datetime = undefined;
             } else {
               scope.selected.year(date.year()).month(date.month()).date(date.date()).hours(date.hours()).minutes(date.minutes()).seconds(date.seconds());
               if ( (scope.selected.clone().startOf('week').month() !== scope.calendar.month() && scope.selected.clone().endOf('week').month() !== scope.calendar.month()) || calendar_update ) {
