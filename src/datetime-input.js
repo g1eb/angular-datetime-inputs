@@ -4,7 +4,7 @@
  * Datetime directive (date and time input element)
  */
 angular.module('g1b.datetime-input', []).
-directive('datetimeInput', ['$document', '$timeout', function ($document, $timeout) {
+directive('datetimeInput', ['$document', function ($document) {
   return {
     restrict: 'E',
     scope: {
@@ -43,19 +43,14 @@ directive('datetimeInput', ['$document', '$timeout', function ($document, $timeo
               scope.calendar = scope.selected.clone();
             }
             scope.datetime = scope.selected;
-            $timeout(function() {
-              scope.onChange();
-            });
+            scope.onChange();
           };
 
           scope.clear = function() {
               scope.datetime = undefined;
               scope.selected = undefined;
-              $timeout(function() {
-                scope.onChange();
-              });
+              scope.onChange();
           };
-
 
           // Convert datetime object to moment.js if its not a moment object yet
           if ( scope.datetime && !scope.datetime._isAMomentObject ) {
