@@ -39,8 +39,7 @@
 .datetime-input.datetime .display .date {
   color: #777;
   font-size: 1em;
-  line-height: 1.5em;
-  margin-top: 0.5em;
+  line-height: 2em;
   display: block;
   overflow: hidden;
 }
