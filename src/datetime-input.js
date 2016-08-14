@@ -10,8 +10,7 @@ directive('datetimeInput', ['$document', function ($document) {
     scope: {
       datetime: '=',
       onChange: '&',
-      placeholder: '@',
-      clearable: '&'
+      placeholder: '@'
     },
     replace: true,
     templateUrl: './datetime-input.html',
@@ -19,8 +18,6 @@ directive('datetimeInput', ['$document', function ($document) {
       return {
         pre: function preLink() {},
         post: function postLink(scope, element) {
-
-          scope.clearable = scope.clearable();
 
           // Get current date
           scope.current = moment();
