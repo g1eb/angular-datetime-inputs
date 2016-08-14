@@ -43,6 +43,9 @@ directive('dateInput', ['$document', function ($document) {
                 scope.calendar = scope.selected.clone();
               }
             }
+            if ( !scope.date ) {
+              scope.date = scope.selected;
+            }
             scope.onChange();
           };
 
