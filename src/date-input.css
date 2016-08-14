@@ -209,3 +209,42 @@
 .datetime-input.date .calendar .calendar-body .week .date.inactive {
   color: #aaa;
 }
+
+
+/**
+ * Clear button
+ */
+.datetime-input.date .clear-button {
+  position: absolute;
+  z-index: 5;
+  bottom: -2.5em;
+  right: -1px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  color: #777;
+  width: 25%;
+  height: auto;
+  font-size: 1.5em;
+  line-height: 2em;
+  box-sizing: border-box;
+  background-color: #efefef;
+  transition: background-color 0.25s ease-out;
+}
+.datetime-input.date .clear-button::before {
+  position: absolute;
+  left: -1em;
+  top: 0;
+  width: 0;
+  height: 0;
+  content: "";
+  border-top: 2em solid #efefef;
+  border-left: 1em solid transparent;
+  transition: border 0.25s ease-out;
+}
+.datetime-input.date .clear-button:hover {
+  background-color: #ddd;
+}
+.datetime-input.date .clear-button:hover::before {
+  border-top-color: #ddd;
+}

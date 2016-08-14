@@ -28,5 +28,8 @@
         <div class="arrow arrow-down" ng-click="selected.subtract(1, 'seconds') && onChange()"></div>
       </div>
     </div>
+    <div class="clear-button" ng-if="!!time">
+      <div ng-click="setDate()">Clear</div>
+    </div>
   </div>
 </div>
