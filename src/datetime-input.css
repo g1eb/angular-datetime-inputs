@@ -39,8 +39,14 @@
 .datetime-input.datetime .display .date {
   color: #777;
   font-size: 1em;
-  line-height: 1em;
+  line-height: 1.5em;
   margin-top: 0.5em;
+  display: block;
+  overflow: hidden;
+}
+.datetime-input.datetime .display .time {
+  font-size: 1.5em;
+  line-height: 1.25em;
   display: block;
   overflow: hidden;
 }
@@ -49,12 +55,8 @@
   line-height: 2em;
   display: block;
   overflow: hidden;
-}
-.datetime-input.datetime .display .time {
-  font-size: 1.5em;
-  line-height: 1.75em;
-  display: block;
-  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .datetime-input.datetime .display.active,
 .datetime-input.datetime .display:hover {
