@@ -2,15 +2,9 @@
   <div class="display"
     ng-click="selectDate(datetime)"
     ng-class="{'active': !!selected }">
-    <div ng-if="datetime">
-      <div class="date">{{ datetime.format('DD MMMM YYYY') }}</div>
-      <div class="time">{{ datetime.format('HH : mm : ss') }}</div>
-    </div>
-    <div ng-if="!datetime">
-      <div class="placeholder">
-        {{ placeholder }}
-      </div>
-    </div>
+    <div class="date">{{ datetime.format('DD MMMM YYYY') }}</div>
+    <div class="time">{{ datetime.format('HH : mm : ss') }}</div>
+    <div ng-if="!datetime" class="placeholder">{{ placeholder }}</div>
   </div>
   <div class="edit-popover" ng-show="!!selected">
     <div class="header"

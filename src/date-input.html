@@ -3,6 +3,7 @@
     ng-click="selectDate(date)"
     ng-class="{'active': !!selected }">
     <div class="date">{{ date.format('DD MMMM YYYY') }}</div>
+    <div ng-if="!date" class="placeholder">{{ placeholder }}</div>
   </div>
   <div class="edit-popover" ng-show="!!selected">
     <div class="header">

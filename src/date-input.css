@@ -42,6 +42,14 @@
   display: block;
   overflow: hidden;
 }
+.datetime-input.date .display .placeholder {
+  font-size: 2em;
+  line-height: 2em;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 .datetime-input.date .display.active,
 .datetime-input.date .display:hover {
   background-color: #ddd;
