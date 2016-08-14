@@ -35,9 +35,13 @@ directive('dateInput', ['$document', function ($document) {
           // Update selected date
           scope.setDate = function (date, calendar_update) {
             if ( scope.selected.isSame(date) ) { return; }
-            scope.selected.year(date.year()).month(date.month()).date(date.date()).hours(date.hours()).minutes(date.minutes()).seconds(date.seconds());
-            if ( scope.selected.clone().startOf('week').month() !== scope.calendar.month() || calendar_update ) {
-              scope.calendar = scope.selected.clone();
+            if ( !date ) {
+              scope.selected = scope.date = undefined;
+            } else {
+              scope.selected.year(date.year()).month(date.month()).date(date.date()).hours(date.hours()).minutes(date.minutes()).seconds(date.seconds());
+              if ( scope.selected.clone().startOf('week').month() !== scope.calendar.month() || calendar_update ) {
+                scope.calendar = scope.selected.clone();
+              }
             }
             scope.onChange();
           };
