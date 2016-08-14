@@ -22,12 +22,12 @@ directive('dateInput', ['$document', function ($document) {
           // Get current date
           scope.current = moment();
 
-          // Set selected date
-          scope.selectDate = function (date) {
-            if ( scope.selected === date ) {
+          // Toggle edit popover
+          scope.toggleEditPopover = function () {
+            if ( !!scope.selected ) {
               scope.selected = undefined;
             } else {
-              scope.selected = date;
+              scope.selected = scope.date || moment();
               scope.calendar = scope.selected.clone();
             }
           };

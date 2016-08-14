@@ -19,6 +19,15 @@ directive('timeInput', ['$document', function ($document) {
         pre: function preLink() {},
         post: function postLink(scope, element) {
 
+          // Toggle edit popover
+          scope.toggleEditPopover = function () {
+            if ( !!scope.selected ) {
+              scope.selected = undefined;
+            } else {
+              scope.selected = scope.time || moment();
+            }
+          };
+
           // Convert time object to moment.js if its not a moment object yet
           if ( scope.time && !scope.time._isAMomentObject ) {
             scope.time = moment(scope.time);

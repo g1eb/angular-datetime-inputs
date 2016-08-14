@@ -1,6 +1,6 @@
 <div class="datetime-input time">
   <div class="display"
-    ng-click="selected = (selected === time) ? '' : time"
+    ng-click="toggleEditPopover()"
     ng-class="{'active': !!selected }">
     <div class="time">{{ time.format('HH : mm : ss') }}</div>
     <div ng-if="!time" class="placeholder">{{ placeholder }}</div>
