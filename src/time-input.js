@@ -28,6 +28,20 @@ directive('timeInput', ['$document', function ($document) {
             }
           };
 
+          // Update selected time
+          scope.setDate = function (datetime, calendar_update) {
+            if ( scope.selected.isSame(datetime) ) { return; }
+            if ( !datetime ) {
+              scope.selected = scope.time = undefined;
+            } else {
+              scope.selected.year(datetime.year()).month(datetime.month()).date(datetime.date()).hours(datetime.hours()).minutes(datetime.minutes()).seconds(datetime.seconds());
+            }
+            if ( !scope.time ) {
+              scope.time = scope.selected;
+            }
+            scope.onChange();
+          };
+
           // Convert time object to moment.js if its not a moment object yet
           if ( scope.time && !scope.time._isAMomentObject ) {
             scope.time = moment(scope.time);
