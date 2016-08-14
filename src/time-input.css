@@ -50,7 +50,7 @@
   display: block;
   overflow: hidden;
 }
-.datetime-input.date .display .placeholder {
+.datetime-input.time .display .placeholder {
   font-size: 2em;
   line-height: 2em;
   display: block;
