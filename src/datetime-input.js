@@ -39,7 +39,9 @@ directive('datetimeInput', ['$document', function ($document) {
             if ( (scope.selected.clone().startOf('week').month() !== scope.calendar.month() && scope.selected.clone().endOf('week').month() !== scope.calendar.month()) || calendar_update ) {
               scope.calendar = scope.selected.clone();
             }
-            scope.datetime = scope.selected;
+            if ( !scope.datetime ) {
+              scope.datetime = scope.selected;
+            }
             scope.onChange();
           };
 
