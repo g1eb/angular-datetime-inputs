@@ -10,21 +10,21 @@
     </div>
     <div class="timer">
       <div class="timer-hours">
-        <div class="arrow arrow-up" ng-click="selected.add(1, 'hours') && handler()"></div>
+        <div class="arrow arrow-up" ng-click="selected.add(1, 'hours') && onChange()"></div>
         {{ selected.format('HH') }}
-        <div class="arrow arrow-down" ng-click="selected.subtract(1, 'hours') && handler()"></div>
+        <div class="arrow arrow-down" ng-click="selected.subtract(1, 'hours') && onChange()"></div>
       </div>
       <div class="timer-divider">:</div>
       <div class="timer-minutes">
-        <div class="arrow arrow-up" ng-click="selected.add(1, 'minutes') && handler()"></div>
+        <div class="arrow arrow-up" ng-click="selected.add(1, 'minutes') && onChange()"></div>
         {{ selected.format('mm') }}
-        <div class="arrow arrow-down" ng-click="selected.subtract(1, 'minutes') && handler()"></div>
+        <div class="arrow arrow-down" ng-click="selected.subtract(1, 'minutes') && onChange()"></div>
       </div>
       <div class="timer-divider">:</div>
       <div class="timer-seconds">
-        <div class="arrow arrow-up" ng-click="selected.add(1, 'seconds') && handler()"></div>
+        <div class="arrow arrow-up" ng-click="selected.add(1, 'seconds') && onChange()"></div>
         {{ selected.format('ss') }}
-        <div class="arrow arrow-down" ng-click="selected.subtract(1, 'seconds') && handler()"></div>
+        <div class="arrow arrow-down" ng-click="selected.subtract(1, 'seconds') && onChange()"></div>
       </div>
     </div>
   </div>

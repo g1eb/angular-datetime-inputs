@@ -9,7 +9,7 @@ directive('datetimeInput', ['$document', '$timeout', function ($document, $timeo
     restrict: 'E',
     scope: {
       datetime: '=',
-      handler: '&',
+      onChange: '&',
       placeholder: '@',
       clearable: '&'
     },
@@ -44,7 +44,7 @@ directive('datetimeInput', ['$document', '$timeout', function ($document, $timeo
             }
             scope.datetime = scope.selected;
             $timeout(function() {
-              scope.handler();
+              scope.onChange();
             });
           };
 
@@ -52,7 +52,7 @@ directive('datetimeInput', ['$document', '$timeout', function ($document, $timeo
               scope.datetime = undefined;
               scope.selected = undefined;
               $timeout(function() {
-                scope.handler();
+                scope.onChange();
               });
           };
 

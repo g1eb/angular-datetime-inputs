@@ -9,7 +9,7 @@ directive('dateInput', ['$document', function ($document) {
     restrict: 'E',
     scope: {
       date: '=',
-      handler: '&'
+      onChange: '&'
     },
     replace: true,
     templateUrl: './date-input.html',
@@ -38,7 +38,7 @@ directive('dateInput', ['$document', function ($document) {
             if ( scope.selected.clone().startOf('week').month() !== scope.calendar.month() || calendar_update ) {
               scope.calendar = scope.selected.clone();
             }
-            scope.handler();
+            scope.onChange();
           };
 
           // Convert date object to moment.js if its not a moment object yet
