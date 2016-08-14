@@ -9,7 +9,8 @@ directive('timeInput', ['$document', function ($document) {
     restrict: 'E',
     scope: {
       time: '=',
-      onChange: '&'
+      onChange: '&',
+      placeholder: '@'
     },
     replace: true,
     templateUrl: './time-input.html',

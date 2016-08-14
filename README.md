@@ -38,6 +38,7 @@ angular.module('myApp', [
 |Property        | Usage           | Default  | Required |
 |:------------- |:-------------|:-----:|:-----:|
 | datetime | moment.js datetime object or a datetime string | none | yes |
+| placeholder | Placeholder is shown when input object is undefined | none | no |
 | on-change | Handler function that is fired on change of datetime object | none | no |
 
 ## Dependencies

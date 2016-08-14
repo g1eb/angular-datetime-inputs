@@ -9,7 +9,8 @@ directive('dateInput', ['$document', function ($document) {
     restrict: 'E',
     scope: {
       date: '=',
-      onChange: '&'
+      onChange: '&',
+      placeholder: '@'
     },
     replace: true,
     templateUrl: './date-input.html',
