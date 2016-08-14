@@ -35,20 +35,18 @@ directive('datetimeInput', ['$document', function ($document) {
           // Update selected date
           scope.setDate = function (date, calendar_update) {
             if ( scope.selected.isSame(date) ) { return; }
-            scope.selected.year(date.year()).month(date.month()).date(date.date()).hours(date.hours()).minutes(date.minutes()).seconds(date.seconds());
-            if ( (scope.selected.clone().startOf('week').month() !== scope.calendar.month() && scope.selected.clone().endOf('week').month() !== scope.calendar.month()) || calendar_update ) {
-              scope.calendar = scope.selected.clone();
+            if ( !date ) {
+              scope.selected = undefined;
+            } else {
+              scope.selected.year(date.year()).month(date.month()).date(date.date()).hours(date.hours()).minutes(date.minutes()).seconds(date.seconds());
+              if ( (scope.selected.clone().startOf('week').month() !== scope.calendar.month() && scope.selected.clone().endOf('week').month() !== scope.calendar.month()) || calendar_update ) {
+                scope.calendar = scope.selected.clone();
+              }
             }
             if ( !scope.datetime ) {
               scope.datetime = scope.selected;
             }
             scope.onChange();
-          };
-
-          scope.clear = function() {
-              scope.datetime = undefined;
-              scope.selected = undefined;
-              scope.onChange();
           };
 
           // Convert datetime object to moment.js if its not a moment object yet
