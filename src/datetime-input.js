@@ -46,7 +46,9 @@ directive('datetimeInput', ['$document', function ($document) {
             if ( !scope.datetime ) {
               scope.datetime = scope.selected;
             }
-            scope.onChange();
+            scope.$$postDigest(function () {
+              scope.onChange();
+            });
           };
 
           // Convert datetime object to moment.js if its not a moment object yet

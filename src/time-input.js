@@ -39,7 +39,9 @@ directive('timeInput', ['$document', function ($document) {
             if ( !scope.time ) {
               scope.time = scope.selected;
             }
-            scope.onChange();
+            scope.$$postDigest(function () {
+              scope.onChange();
+            });
           };
 
           // Convert time object to moment.js if its not a moment object yet
