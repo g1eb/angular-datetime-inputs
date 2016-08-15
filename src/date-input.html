@@ -2,24 +2,22 @@
   <div class="display"
     ng-click="toggleEditPopover()"
     ng-class="{'active': !!selected }">
-    <div class="date">{{ date.format('DD MMMM YYYY') }}</div>
-    <div ng-if="!date" class="placeholder">{{ placeholder }}</div>
+    <div class="date" ng-bind="date.format('DD MMMM YYYY')"></div>
+    <div ng-if="!date" class="placeholder" ng-bind="placeholder"></div>
   </div>
   <div class="edit-popover" ng-show="!!selected">
-    <div class="header">
-      {{ selected.format('DD MMMM YYYY') }}
-    </div>
+    <div class="header" ng-bind="selected.format('DD MMMM YYYY')"></div>
     <div class="calendar">
       <div class="calendar-header">
         <div class="arrow arrow-left" ng-click="calendar.subtract(1, 'months')"></div>
-        {{ calendar.format('MMMM') }}
+        <span ng-bind="calendar.format('MMMM')"></span>
         <div class="arrow arrow-right" ng-click="calendar.add(1, 'months')"></div>
       </div>
       <div class="calendar-body">
         <div class="weekdays">
-          <span class="weekday" ng-repeat="weekday in 'weeeeek' track by $index">
-            {{ calendar.clone().startOf('week').add($index, 'days').format('ddd') }}
-          </span>
+          <span class="weekday"
+            ng-repeat="weekday in 'weeeeek' track by $index"
+            ng-bind="calendar.clone().startOf('week').add($index, 'days').format('ddd')"></span>
         </div>
         <div class="week" ng-repeat="week in 'months' | limitTo: ((calendar.clone().endOf('month').week() - calendar.clone().startOf('month').week()) + 1) track by $index">
           <span class="date" ng-repeat="date in 'weeeeek' track by $index"
@@ -28,9 +26,8 @@
               'active': calendar.clone().startOf('month').add($parent.$index, 'weeks').weekday($index).startOf('day').isSame(selected.clone().startOf('day')),
               'inactive': calendar.clone().startOf('month').add($parent.$index, 'weeks').weekday($index).month() !== calendar.month()
             }"
-            ng-click="update(selected.clone().year(calendar.clone().startOf('month').add($parent.$index, 'weeks').weekday($index).year()).month(calendar.clone().startOf('month').add($parent.$index, 'weeks').weekday($index).month()).date(calendar.clone().startOf('month').add($parent.$index, 'weeks').weekday($index).date()), true)">
-            {{ calendar.clone().startOf('month').add($parent.$index, 'weeks').weekday($index).date() }}
-          </span>
+            ng-click="update(selected.clone().year(calendar.clone().startOf('month').add($parent.$index, 'weeks').weekday($index).year()).month(calendar.clone().startOf('month').add($parent.$index, 'weeks').weekday($index).month()).date(calendar.clone().startOf('month').add($parent.$index, 'weeks').weekday($index).date()), true)"
+            ng-bind="calendar.clone().startOf('month').add($parent.$index, 'weeks').weekday($index).date()"></span>
         </div>
       </div>
     </div>
