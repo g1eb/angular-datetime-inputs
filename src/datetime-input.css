@@ -331,7 +331,9 @@
   right: -1px;
   cursor: pointer;
   outline: none;
-  border: none;
+  border-top: 1px solid #aaa;
+  border-right: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
   color: #777;
   width: 25%;
   height: auto;
@@ -342,19 +344,19 @@
   transition: background-color 0.25s ease-out;
 }
 .datetime-input.datetime .clear-button::before {
-  position: absolute;
-  left: -1em;
-  top: 0;
-  width: 0;
-  height: 0;
   content: "";
-  border-top: 2em solid #efefef;
-  border-left: 1em solid transparent;
-  transition: border 0.25s ease-out;
+  position: absolute;
+  left: -0.5em;
+  top: -1px;
+  width: 1em;
+  height: 2em;
+  background: #efefef;
+  border-top: 1px solid #aaa;
+  border-left: 1px solid #aaa;
+  transition: background 0.25s ease-out;
+  transform: skewX(25deg);
 }
-.datetime-input.datetime .clear-button:hover {
-  background-color: #ddd;
-}
+.datetime-input.datetime .clear-button:hover,
 .datetime-input.datetime .clear-button:hover::before {
-  border-top-color: #ddd;
+  background: #ddd;
 }
