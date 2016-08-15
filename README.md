@@ -2,7 +2,7 @@
 
 This directive is designed to provide easy and intuitive input of moment.js datetime objects.
 
-Desgined to be as simple as possible to afford intuitive interactions.
+Desgined to be as simple as possible in order to afford intuitive interactions.
 
 Converted into an angular directive for your convenience :)
 
@@ -27,17 +27,30 @@ angular.module('myApp', [
 ])
 ```
 
-3) Use 'datetime-input' directive in a view
+3) Use any of the directives in a view
 
+For date input only
 ```html
-<datetime-input start="start" end="end" on-change="print(start, end)"></datetime-input>
+<date-input date="date" on-change="print(date)" placeholder="Select date"></date-input>
+```
+
+For time input only
+```html
+<time-input time="time" on-change="print(time)" placeholder="Select time"></date-input>
+```
+
+For both date and time input
+```html
+<datetime-input datetime="datetime" on-change="print(datetime)" placeholder="Select datetime"></datetime-input>
 ```
 
 ### Attributes
 
 |Property        | Usage           | Default  | Required |
 |:------------- |:-------------|:-----:|:-----:|
-| datetime | moment.js datetime object or a datetime string | none | yes |
+| date | moment.js datetime object or a datetime string | none | no |
+| time | moment.js datetime object or a datetime string | none | no |
+| datetime | moment.js datetime object or a datetime string | none | no |
 | placeholder | Placeholder is shown when input object is undefined | none | no |
 | on-change | Handler function that is fired on change of datetime object | none | no |
 
