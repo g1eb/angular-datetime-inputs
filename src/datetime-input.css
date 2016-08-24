@@ -71,6 +71,7 @@
   z-index: 5;
   top: 4.5em;
   width: 100%;
+  min-width: 350px;
   height: auto;
   padding: 0;
   background-color: #efefef;
@@ -94,7 +95,7 @@
   width: 1em;
   height: 1em;
   top: -0.55em;
-  left: 47.8%;
+  left: 10%;
   z-index: 2;
   border-color: #aaa;
   border-style: solid;
