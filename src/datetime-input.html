@@ -1,4 +1,4 @@
-<div class="datetime-input datetime" ng-class="{'active': !!selected}">
+<div class="datetime-input datetime" ng-class="{'active': !!selected, 'hover': !!hover}">
   <div class="display"
     ng-click="toggleEditPopover()"
     ng-class="{'active': !!selected }">
@@ -9,6 +9,8 @@
   <div class="edit-popover" ng-show="!!selected">
     <div class="header"
       ng-click="calendar_active = !calendar_active"
+      ng-mouseenter="hover = true"
+      ng-mouseout="hover = false"
       ng-bind="selected.format('DD MMMM YYYY')"></div>
     <div class="calendar" ng-show="!!calendar_active">
       <div class="calendar-header">

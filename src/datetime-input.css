@@ -42,6 +42,9 @@
   -webkit-transform: rotate(-45deg);
   transition: background-color 0.25s ease-out;
 }
+.datetime-input.datetime.active.hover::before {
+  background-color: #ddd;
+}
 
 
 /**
