@@ -1,6 +1,6 @@
 {
   "name": "angular-datetime-input",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "UI widget for datetime input, converted to an angular directive for your convenience.",
   "main": "index.js",
   "dependencies": {},
