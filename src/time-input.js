@@ -9,7 +9,7 @@ directive('timeInput', ['$document', function ($document) {
     restrict: 'E',
     scope: {
       time: '=',
-      format: '=',
+      format: '=?',
       onChange: '&',
       placeholder: '@'
     },
