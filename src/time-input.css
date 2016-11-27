@@ -30,7 +30,8 @@
   background-color: #efefef;
   width: 2em;
   height: 2em;
-  bottom: -1.6em;
+  bottom: -1.5em;
+  box-sizing: border-box;
   left: calc(50% - 1em);
   z-index: 10;
   border-color: #aaa;
