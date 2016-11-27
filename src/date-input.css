@@ -87,12 +87,13 @@
   background-color: #efefef;
   width: 1em;
   height: 1em;
-  top: -0.55em;
+  top: -0.5em;
   left: 10%;
   z-index: 2;
   border-color: #aaa;
   border-style: solid;
   border-width: 1px 1px 0 0;
+  box-sizing: border-box;
   transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
