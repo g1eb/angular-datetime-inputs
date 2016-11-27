@@ -4,7 +4,6 @@
 .datetime-input.date {
   position: relative;
   width: 100%;
-  min-width: 150px;
   height: auto;
   min-height: 4em;
   margin: 0;
