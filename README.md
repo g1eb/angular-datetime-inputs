@@ -23,7 +23,7 @@ Click <a href="https://rawgit.com/g1eb/angular-datetime-input/master/" target="_
 1) Install 'angular-datetime-input' with bower
 
 ```
-bower install angular-datetime-input
+bower install angular-datetime-inputs
 ```
 
 Or:
