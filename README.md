@@ -18,7 +18,7 @@ Click <a href="https://rawgit.com/g1eb/angular-datetime-input/master/" target="_
 ### Datetime input
 [<img src="https://raw.githubusercontent.com/g1eb/angular-datetime-input/master/images/datetime.png" alt="Angular directive datetime input - datetime input" width="300px">](https://rawgit.com/g1eb/angular-datetime-input/master/)
 
-## Installation
+## Install
 
 1) Install 'angular-datetime-input' with bower
 
@@ -26,7 +26,7 @@ Click <a href="https://rawgit.com/g1eb/angular-datetime-input/master/" target="_
 bower install angular-datetime-input
 ```
 
-Or with npm _(note that 'inputs' plural here)_:
+or with npm
 
 ```
 npm install angular-datetime-inputs
