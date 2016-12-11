@@ -1,5 +1,5 @@
 {
-  "name": "angular-datetime-inputs",
+  "name": "angular-datetime-input",
   "version": "0.0.9",
   "description": "UI widget for datetime input, converted to an angular directive for your convenience.",
   "homepage": "https://github.com/g1eb/angular-datetime-input",

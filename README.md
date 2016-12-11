@@ -26,7 +26,7 @@ Click <a href="https://rawgit.com/g1eb/angular-datetime-input/master/" target="_
 bower install angular-datetime-input
 ```
 
-Or:
+Or with npm _(note that 'inputs' plural here)_:
 
 ```
 npm install angular-datetime-inputs
