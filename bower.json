@@ -6,8 +6,8 @@
   ],
   "description": "UI widget for datetime input, converted to an angular directive for your convenience.",
   "main": [
-    "dist/datetime-input.js",
-    "dist/datetime-input.css"
+    "dist/datetime-input.min.js",
+    "dist/datetime-input.min.css"
   ],
   "moduleType": [],
   "keywords": [
