@@ -3,7 +3,7 @@
 /**
  * Time directive (time input element)
  */
-angular.module('g1b.datetime-input').
+angular.module('g1b.datetime-inputs').
 directive('timeInput', ['$document', function ($document) {
   return {
     restrict: 'E',
