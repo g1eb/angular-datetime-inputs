@@ -9,12 +9,27 @@ Converted into an angular directive for your convenience :)
 ## Demo
 Click <a href="https://rawgit.com/g1eb/angular-datetime-input/master/" target="_blank">here</a> for a live demo.
 
+### Date input
+[<img src="https://raw.githubusercontent.com/g1eb/angular-datetime-input/master/images/date.png" alt="Angular directive datetime input - date input" width="300px">](https://rawgit.com/g1eb/angular-datetime-input/master/)
+
+### Time input
+[<img src="https://raw.githubusercontent.com/g1eb/angular-datetime-input/master/images/time.png" alt="Angular directive datetime input - time input" width="300px">](https://rawgit.com/g1eb/angular-datetime-input/master/)
+
+### Datetime input
+[<img src="https://raw.githubusercontent.com/g1eb/angular-datetime-input/master/images/datetime.png" alt="Angular directive datetime input - datetime input" width="300px">](https://rawgit.com/g1eb/angular-datetime-input/master/)
+
 ## Installation
 
 1) Install 'angular-datetime-input' with bower
 
 ```
 bower install angular-datetime-input
+```
+
+Or:
+
+```
+npm install angular-datetime-inputs
 ```
 
 2) Add 'g1b.datetime-input' module to your app config
@@ -36,7 +51,7 @@ For date input only
 
 For time input only
 ```html
-<time-input time="time" on-change="print(time)" placeholder="Select time"></date-input>
+<time-input time="time" on-change="print(time)" placeholder="Select time"></time-input>
 ```
 
 For both date and time input
