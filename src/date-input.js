@@ -34,7 +34,7 @@ directive('dateInput', ['$document', function ($document) {
 
           // Update selected date
           scope.update = function (datetime, calendar_update) {
-            if ( scope.selected.isSame(datetime) && !!scope.datetime ) { return; }
+            if ( scope.selected.isSame(datetime) && !!scope.date ) { return; }
             if ( !datetime ) {
               scope.selected = scope.date = undefined;
             } else {
