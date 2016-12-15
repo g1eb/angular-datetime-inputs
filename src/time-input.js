@@ -9,6 +9,7 @@ directive('timeInput', ['$document', function ($document) {
     restrict: 'E',
     scope: {
       time: '=',
+      format: '=?',
       onChange: '&',
       placeholder: '@'
     },
@@ -46,7 +47,7 @@ directive('timeInput', ['$document', function ($document) {
 
           // Convert time object to moment.js if its not a moment object yet
           if ( scope.time && !scope.time._isAMomentObject ) {
-            scope.time = moment(scope.time);
+            scope.time = moment(scope.time, scope.format);
           }
 
           // Bind click events outside directive to close edit popover
