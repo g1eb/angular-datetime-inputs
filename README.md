@@ -7,22 +7,37 @@ Desgined to be as simple as possible in order to afford intuitive interactions.
 Converted into an angular directive for your convenience :)
 
 ## Demo
-Click <a href="https://rawgit.com/g1eb/angular-datetime-input/master/" target="_blank">here</a> for a live demo.
+Click <a href="https://rawgit.com/g1eb/angular-datetime-inputs/master/" target="_blank">here</a> for a live demo.
 
-## Installation
+### Date input
+[<img src="https://raw.githubusercontent.com/g1eb/angular-datetime-inputs/master/images/date.png" alt="Angular directive datetime input - date input" width="300px">](https://rawgit.com/g1eb/angular-datetime-inputs/master/)
 
-1) Install 'angular-datetime-input' with bower
+### Time input
+[<img src="https://raw.githubusercontent.com/g1eb/angular-datetime-inputs/master/images/time.png" alt="Angular directive datetime input - time input" width="300px">](https://rawgit.com/g1eb/angular-datetime-inputs/master/)
+
+### Datetime input
+[<img src="https://raw.githubusercontent.com/g1eb/angular-datetime-inputs/master/images/datetime.png" alt="Angular directive datetime input - datetime input" width="300px">](https://rawgit.com/g1eb/angular-datetime-inputs/master/)
+
+## Install
+
+1) Install 'angular-datetime-inputs' with bower
 
 ```
-bower install angular-datetime-input
+bower install angular-datetime-inputs
 ```
 
-2) Add 'g1b.datetime-input' module to your app config
+or with npm
+
+```
+npm install angular-datetime-inputs
+```
+
+2) Add 'g1b.datetime-inputs' module to your app config
 
 
 ```javascript
 angular.module('myApp', [
-  'g1b.datetime-input',
+  'g1b.datetime-inputs',
   ......
 ])
 ```
@@ -36,7 +51,7 @@ For date input only
 
 For time input only
 ```html
-<time-input time="time" on-change="print(time)" placeholder="Select time"></date-input>
+<time-input time="time" on-change="print(time)" placeholder="Select time"></time-input>
 ```
 
 For both date and time input

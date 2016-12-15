@@ -4,7 +4,6 @@
 .datetime-input.date {
   position: relative;
   width: 100%;
-  min-width: 150px;
   height: auto;
   min-height: 4em;
   margin: 0;
@@ -22,26 +21,6 @@
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
-}
-.datetime-input.date.active::before {
-  content: "";
-  display: block;
-  position: absolute;
-  background-color: #efefef;
-  width: 2em;
-  height: 2em;
-  bottom: -1.6em;
-  left: calc(50% - 1em);
-  z-index: 10;
-  border-color: #aaa;
-  border-style: solid;
-  border-width: 1px 1px 0 0;
-  transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-  transition: background-color 0.25s ease-out;
 }
 
 
@@ -96,10 +75,30 @@
 .datetime-input.date .edit-popover .header {
   width: 100%;
   color: #777;
-  padding-top: 0.5em;
   font-size: 1.5em;
   line-height: 2em;
   cursor: default;
+  transition: background-color 0.25s ease-out;
+}
+.datetime-input.date .edit-popover .header::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: #efefef;
+  width: 1em;
+  height: 1em;
+  top: -0.5em;
+  left: 10%;
+  z-index: 2;
+  border-color: #aaa;
+  border-style: solid;
+  border-width: 1px 1px 0 0;
+  box-sizing: border-box;
+  transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
   transition: background-color 0.25s ease-out;
 }
 

@@ -3,7 +3,7 @@
 /**
  * Time directive (time input element)
  */
-angular.module('g1b.datetime-input').
+angular.module('g1b.datetime-inputs').
 directive('timeInput', ['$document', function ($document) {
   return {
     restrict: 'E',
@@ -31,7 +31,7 @@ directive('timeInput', ['$document', function ($document) {
 
           // Update selected time
           scope.update = function (datetime, calendar_update) {
-            if ( scope.selected.isSame(datetime) ) { return; }
+            if ( scope.selected.isSame(datetime) && !!scope.time ) { return; }
             if ( !datetime ) {
               scope.selected = scope.time = undefined;
             } else {

@@ -10,11 +10,11 @@ gulp.task('build', function () {
   gulp.src(['src/datetime-input.js', 'src/date-input.js', 'src/time-input.js'])
     .pipe(embedTemplates())
     .pipe(uglify())
-    .pipe(concat('datetime-input.js'))
+    .pipe(concat('datetime-inputs.min.js'))
     .pipe(gulp.dest('./dist'));
   gulp.src(['src/datetime-input.css', 'src/date-input.css', 'src/time-input.css'])
     .pipe(cssnano())
-    .pipe(concat('datetime-input.css'))
+    .pipe(concat('datetime-inputs.min.css'))
     .pipe(gulp.dest('./dist'));
 });
 
