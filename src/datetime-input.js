@@ -23,6 +23,11 @@ directive('datetimeInput', ['$document', function ($document) {
           // Get current date
           scope.current = moment();
 
+          // Convert datetime object to moment.js if its not a moment object yet
+          if ( scope.datetime && !scope.datetime._isAMomentObject ) {
+            scope.datetime = moment(scope.datetime, scope.format);
+          }
+
           // Toggle edit popover
           scope.toggleEditPopover = function () {
             if ( !!scope.selected ) {
@@ -51,11 +56,6 @@ directive('datetimeInput', ['$document', function ($document) {
               scope.onChange();
             });
           };
-
-          // Convert datetime object to moment.js if its not a moment object yet
-          if ( scope.datetime && !scope.datetime._isAMomentObject ) {
-            scope.datetime = moment(scope.datetime, scope.format);
-          }
 
           // Bind click events outside directive to close edit popover
           $document.on('mousedown', function (e) {
