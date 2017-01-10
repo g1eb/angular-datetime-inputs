@@ -57,12 +57,17 @@ directive('dateInput', ['$document', function ($document) {
             });
           };
 
+          // Close edit popover
+          scope.close = function () {
+            scope.selected = '';
+            scope.calendar_active = false;
+          }
+
           // Bind click events outside directive to close edit popover
           $document.on('mousedown', function (e) {
             if ( !!scope.selected && !element[0].contains(e.target) ) {
               scope.$apply(function () {
-                scope.selected = '';
-                scope.calendar_active = false;
+                scope.close();
               });
             }
           });
