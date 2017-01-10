@@ -55,6 +55,7 @@ directive('dateInput', ['$document', function ($document) {
             scope.$$postDigest(function () {
               scope.onChange();
             });
+            scope.close();
           };
 
           // Close edit popover
