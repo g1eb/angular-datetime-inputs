@@ -8,7 +8,9 @@
   <div class="edit-popover" ng-show="!!selected">
     <div class="header" ng-bind="selected.format('DD MMMM YYYY')"></div>
     <div class="calendar">
-      <div class="calendar-header">
+      <div class="calendar-header"
+        scroll-up="calendar.add(1, 'months')"
+        scroll-down="calendar.subtract(1, 'months')">
         <div class="arrow arrow-left" ng-click="calendar.subtract(1, 'months')"></div>
         <span ng-bind="calendar.format('YYYY') === current.format('YYYY') ? calendar.format('MMMM') : calendar.format('MMMM YYYY')"></span>
         <div class="arrow arrow-right" ng-click="calendar.add(1, 'months')"></div>
