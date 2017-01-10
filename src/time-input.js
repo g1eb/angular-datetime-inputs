@@ -53,7 +53,6 @@ directive('timeInput', ['$document', function ($document) {
           // Close edit popover
           scope.close = function () {
             scope.selected = '';
-            scope.calendar_active = false;
           }
 
           // Bind click events outside directive to close edit popover
