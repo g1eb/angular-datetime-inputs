@@ -1,5 +1,5 @@
 <div class="datetime-input time">
-  <div class="display"
+  <div class="{{cssClass || 'display'}}"
     ng-click="toggleEditPopover()"
     ng-class="{'active': !!selected }">
     <div class="time" ng-bind="time.format('HH : mm : ss')"></div>
