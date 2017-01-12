@@ -1,7 +1,6 @@
 <div class="datetime-input date">
-  <div class="{{cssClass || 'display'}}"
-    ng-click="toggleEditPopover()"
-    ng-class="{'active': !!selected }">
+  <div ng-click="toggleEditPopover()"
+    ng-class="{'active': !!selected, 'display': !cssClass, '{{cssClass}}': !!cssClass}">
     <div class="date" ng-bind="date.format('DD MMMM YYYY')"></div>
     <div ng-if="!date" class="placeholder" ng-bind="placeholder"></div>
   </div>
