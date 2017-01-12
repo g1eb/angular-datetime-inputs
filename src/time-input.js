@@ -11,7 +11,8 @@ directive('timeInput', ['$document', function ($document) {
       time: '=',
       format: '=?',
       onChange: '&',
-      placeholder: '@'
+      placeholder: '@',
+      cssClass:'@'
     },
     replace: true,
     templateUrl: './time-input.html',
