@@ -44,17 +44,17 @@ angular.module('myApp', [
 
 3) Use any of the directives in a view
 
-For date input only
+For date input only:
 ```html
 <date-input date="date" on-change="print(date)" placeholder="Select date"></date-input>
 ```
 
-For time input only
+For time input only:
 ```html
 <time-input time="time" on-change="print(time)" placeholder="Select time"></time-input>
 ```
 
-For both date and time input
+For both date and time input:
 ```html
 <datetime-input datetime="datetime" on-change="print(datetime)" placeholder="Select datetime"></datetime-input>
 ```
@@ -68,8 +68,8 @@ For both date and time input
 | datetime | moment.js datetime object or a datetime string | none | no |
 | format | moment.js compatible date/time format | none | no |
 | placeholder | Placeholder is shown when input object is undefined | none | no |
-| cssClass | custom css class name | pre-defined style | no |
 | on-change | Handler function that is fired on change of datetime object | none | no |
+| css-class | custom css class name for datetime presentation | predefined | no |
 
 ## Dependencies
 
