@@ -67,6 +67,8 @@ For both date and time input:
 | time | moment.js datetime object or a datetime string | none | no |
 | datetime | moment.js datetime object or a datetime string | none | no |
 | format | moment.js compatible date/time format | none | no |
+| min-date | moment.js datetime object min datetime | none | no |
+| max-date | moment.js datetime object max datetime | none | no |
 | placeholder | Placeholder is shown when input object is undefined | none | no |
 | on-change | Handler function that is fired on change of datetime object | none | no |
 | css-class | custom css class name for datetime presentation | predefined | no |
