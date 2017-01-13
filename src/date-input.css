@@ -54,6 +54,13 @@
 .datetime-input.date .display:hover {
   background-color: #ddd;
 }
+.datetime-input.date .display.warning {
+  background-color: rgba(255, 54, 46, 0.75);
+}
+.datetime-input.date .display.warning.active,
+.datetime-input.date .display.warning:hover {
+  background-color: rgba(255, 54, 46, 0.75);
+}
 
 
 /**
