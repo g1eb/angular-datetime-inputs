@@ -10,6 +10,8 @@ directive('datetimeInput', ['$document', function ($document) {
     scope: {
       datetime: '=',
       format: '=?',
+      minDate:'=?',
+      maxDate:'=?',
       onChange: '&',
       placeholder: '@',
       cssClass:'@',

@@ -10,11 +10,11 @@ directive('dateInput', ['$document', function ($document) {
     scope: {
       date: '=',
       format: '=?',
+      minDate:'=?',
+      maxDate:'=?',
       onChange: '&',
       placeholder: '@',
       cssClass:'@',
-      minDate:'=?',
-      maxDate:'=?',
     },
     replace: true,
     templateUrl: './date-input.html',
