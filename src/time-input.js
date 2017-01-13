@@ -4,7 +4,7 @@
  * Time directive (time input element)
  */
 angular.module('g1b.datetime-inputs').
-directive('timeInput', ['$document', function ($document) {
+directive('timeInput', ['$document', '$timeout', function ($document, $timeout) {
   return {
     restrict: 'E',
     scope: {
@@ -42,15 +42,20 @@ directive('timeInput', ['$document', function ($document) {
             if ( scope.selected.isSame(datetime) && !!scope.time ) { return; }
             if ( !datetime ) {
               scope.selected = scope.time = undefined;
-            } else {
+            } else if ( ( !scope.minDate || datetime > scope.minDate ) && ( !scope.maxDate || datetime < scope.maxDate ) ) {
               scope.selected.year(datetime.year()).month(datetime.month()).date(datetime.date()).hours(datetime.hours()).minutes(datetime.minutes()).seconds(datetime.seconds());
+              if ( !scope.time ) {
+                scope.time = scope.selected;
+              }
+              scope.$$postDigest(function () {
+                scope.onChange();
+              });
+            } else {
+              scope.warning = true;
+              $timeout(function () {
+                scope.warning = false;
+              }, 250);
             }
-            if ( !scope.time ) {
-              scope.time = scope.selected;
-            }
-            scope.$$postDigest(function () {
-              scope.onChange();
-            });
           };
 
           // Close edit popover
