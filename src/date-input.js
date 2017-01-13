@@ -13,6 +13,8 @@ directive('dateInput', ['$document', function ($document) {
       onChange: '&',
       placeholder: '@',
       cssClass:'@',
+      minDate:'=?',
+      maxDate:'=?',
     },
     replace: true,
     templateUrl: './date-input.html',

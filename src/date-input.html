@@ -27,6 +27,7 @@
               'active': calendar.clone().startOf('month').add($parent.$index, 'weeks').weekday($index).startOf('day').isSame(selected.clone().startOf('day')),
               'inactive': calendar.clone().startOf('month').add($parent.$index, 'weeks').weekday($index).month() !== calendar.month()
             }"
+            ng-disabled="(!!minDate && calendar.clone().startOf('month').add($parent.$index, 'weeks').weekday($index).date().isBefore(minDate.date())) || (!!maxDate && calendar.clone().startOf('month').add($parent.$index, 'weeks').weekday($index).date().isAfter(maxDate.date()))"
             ng-click="update(selected.clone().year(calendar.clone().startOf('month').add($parent.$index, 'weeks').weekday($index).year()).month(calendar.clone().startOf('month').add($parent.$index, 'weeks').weekday($index).month()).date(calendar.clone().startOf('month').add($parent.$index, 'weeks').weekday($index).date()), true)"
             ng-bind="calendar.clone().startOf('month').add($parent.$index, 'weeks').weekday($index).date()"></span>
         </div>
