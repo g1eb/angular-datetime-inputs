@@ -46,11 +46,11 @@
       </div>
       <div class="timer-divider">:</div>
       <div class="timer-minutes"
-        scroll-up="update(selected.clone().add(1, 'minutes'))"
-        scroll-down="update(selected.clone().subtract(1, 'minutes'))">
-        <div class="arrow arrow-up" ng-click="update(selected.clone().add(1, 'minutes'))"></div>
+        scroll-up="update(selected.clone().add(minuteStep, 'minutes'))"
+        scroll-down="update(selected.clone().subtract(minuteStep, 'minutes'))">
+        <div class="arrow arrow-up" ng-click="update(selected.clone().add(minuteStep, 'minutes'))"></div>
         <span ng-bind="selected.format('mm')"></span>
-        <div class="arrow arrow-down" ng-click="update(selected.clone().subtract(1, 'minutes'))"></div>
+        <div class="arrow arrow-down" ng-click="update(selected.clone().subtract(minuteStep, 'minutes'))"></div>
       </div>
       <div class="timer-divider">:</div>
       <div class="timer-seconds"

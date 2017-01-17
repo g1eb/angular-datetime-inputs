@@ -12,6 +12,7 @@ directive('datetimeInput', ['$document', '$timeout', function ($document, $timeo
       format: '=?',
       minDate:'=?',
       maxDate:'=?',
+      minuteStep:'=?',
       onChange: '&',
       placeholder: '@',
       cssClass:'@',
@@ -23,6 +24,9 @@ directive('datetimeInput', ['$document', '$timeout', function ($document, $timeo
         pre: function preLink() {},
         post: function postLink(scope, element) {
 
+          if(!scope.minuteStep){
+            scope.minuteStep = 1;
+          }
           // Get current date
           scope.current = moment();
 
