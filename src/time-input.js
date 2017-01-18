@@ -12,6 +12,7 @@ directive('timeInput', ['$document', '$timeout', function ($document, $timeout) 
       format: '=?',
       minDate:'=?',
       maxDate:'=?',
+      minuteStep : '=?',
       onChange: '&',
       placeholder: '@',
       cssClass:'@',
@@ -22,6 +23,10 @@ directive('timeInput', ['$document', '$timeout', function ($document, $timeout) 
       return {
         pre: function preLink() {},
         post: function postLink(scope, element) {
+
+          if(!scope.minuteStep){
+            scope.minuteStep = 1;
+          }
 
           // Convert time object to moment.js if its not a moment object yet
           if ( scope.time && !scope.time._isAMomentObject ) {
