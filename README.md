@@ -67,6 +67,9 @@ For both date and time input:
 | time | moment.js datetime object or a datetime string | none | no |
 | datetime | moment.js datetime object or a datetime string | none | no |
 | format | moment.js compatible date/time format | none | no |
+| hourStep | step size for hour input | 1 | no |
+| minuteStep | step size for minute input | 1 | no |
+| secondStep | step size for second input | 1 | no |
 | placeholder | Placeholder is shown when input object is undefined | none | no |
 | on-change | Handler function that is fired on change of datetime object | none | no |
 | css-class | custom css class name for datetime presentation | predefined | no |
