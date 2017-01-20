@@ -66,7 +66,9 @@ For both date and time input:
 | date | moment.js datetime object or a datetime string | none | no |
 | time | moment.js datetime object or a datetime string | none | no |
 | datetime | moment.js datetime object or a datetime string | none | no |
-| format | moment.js compatible date/time format | none | no |
+| format | [moment.js compatible date/time format](https://momentjs.com/docs/#/displaying/format/) used for parsing initial datetime objects | none | no |
+| date-format | [moment.js compatible date format](https://momentjs.com/docs/#/displaying/format/) used for display in date and datetime input directives | 'DD MMMM YYYY' | no |
+| time-format | [moment.js compatible time format](https://momentjs.com/docs/#/displaying/format/) used for display in time and datetime input directives | 'HH : mm : ss' | no |
 | min-date | moment.js datetime object min datetime | none | no |
 | max-date | moment.js datetime object max datetime | none | no |
 | hourStep | step size for hour input | 1 | no |
