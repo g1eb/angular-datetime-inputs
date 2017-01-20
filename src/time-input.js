@@ -10,6 +10,7 @@ directive('timeInput', ['$document', '$timeout', function ($document, $timeout) 
     scope: {
       time: '=',
       format: '=?',
+      timeFormat: '=?',
       minDate:'=?',
       maxDate:'=?',
       hourStep : '=?',

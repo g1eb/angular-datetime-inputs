@@ -10,6 +10,7 @@ directive('dateInput', ['$document', '$timeout', function ($document, $timeout) 
     scope: {
       date: '=',
       format: '=?',
+      dateFormat: '=?',
       minDate:'=?',
       maxDate:'=?',
       onChange: '&',

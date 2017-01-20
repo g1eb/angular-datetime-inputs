@@ -2,7 +2,7 @@
   <div ng-click="toggleEditPopover()"
     class="display"
     ng-class="{'active': !!selected, 'warning': !!warning, '{{cssClass}}': !!cssClass}">
-    <div class="date" ng-bind="date.format('DD MMMM YYYY')"></div>
+    <div class="date" ng-bind="date.format(dateFormat || 'DD MMMM YYYY')"></div>
     <div ng-if="!date" class="placeholder" ng-bind="placeholder"></div>
   </div>
   <div class="edit-popover" ng-show="!!selected">

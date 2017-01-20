@@ -10,6 +10,8 @@ directive('datetimeInput', ['$document', '$timeout', function ($document, $timeo
     scope: {
       datetime: '=',
       format: '=?',
+      dateFormat: '=?',
+      timeFormat: '=?',
       minDate:'=?',
       maxDate:'=?',
       hourStep:'=?',
