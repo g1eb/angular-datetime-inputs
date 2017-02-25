@@ -7,7 +7,7 @@ angular.module('g1b.datetime-inputs').
       return {
         pre: function preLink() {},
         post: function postLink(scope, element, attrs) {
-          element.bind('DOMMouseScroll mousewheel wheel', function (ev) {
+          element.bind('mousewheel wheel', function (ev) {
             ev = ev.originalEvent || ev;
             var delta = ev.wheelDelta || (-1 * ev.deltaY) || 0;
             if ( delta > 0 ) {
@@ -32,7 +32,7 @@ angular.module('g1b.datetime-inputs').
       return {
         pre: function preLink() {},
         post: function postLink(scope, element, attrs) {
-          element.bind('DOMMouseScroll mousewheel wheel', function (ev) {
+          element.bind('mousewheel wheel', function (ev) {
             ev = ev.originalEvent || ev;
             var delta = ev.wheelDelta || (-1 * ev.deltaY) || 0;
             if ( delta < 0 ) {
