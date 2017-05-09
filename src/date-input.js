@@ -15,6 +15,7 @@ directive('dateInput', ['$document', '$timeout', function ($document, $timeout) 
       maxDate:'=?',
       onChange: '&',
       placeholder: '@',
+      clearText: '@',
       cssClass:'@',
     },
     replace: true,
