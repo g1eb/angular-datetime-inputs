@@ -18,6 +18,7 @@ directive('timeInput', ['$document', '$timeout', function ($document, $timeout) 
       secondStep : '=?',
       onChange: '&',
       placeholder: '@',
+      clearText: '@',
       cssClass:'@',
     },
     replace: true,

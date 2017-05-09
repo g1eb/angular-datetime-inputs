@@ -19,6 +19,7 @@ directive('datetimeInput', ['$document', '$timeout', function ($document, $timeo
       secondStep:'=?',
       onChange: '&',
       placeholder: '@',
+      clearText: '@',
       cssClass:'@',
     },
     replace: true,
