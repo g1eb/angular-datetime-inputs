@@ -62,7 +62,7 @@
       </div>
     </div>
     <div class="clear-button" ng-if="!!datetime">
-      <div ng-click="update()">Clear</div>
+      <div ng-click="update()" ng-bind="clearText || 'Clear'"></div>
     </div>
   </div>
 </div>
