@@ -17,6 +17,7 @@ directive('timeInput', ['$document', '$timeout', function ($document, $timeout) 
       minuteStep : '=?',
       secondStep : '=?',
       onChange: '&',
+      onClose: '&?',
       placeholder: '@',
       clearText: '@',
       cssClass:'@',
@@ -66,6 +67,10 @@ directive('timeInput', ['$document', '$timeout', function ($document, $timeout) 
           // Close edit popover
           scope.close = function () {
             scope.selected = '';
+
+            if ( !!scope.onClose ) {
+              scope.onClose();
+            }
           }
 
           // Bind click events outside directive to close edit popover
