@@ -77,6 +77,7 @@ For both date and time input:
 | placeholder | Placeholder is shown when input object is undefined | none | no |
 | clearText | Clear text shown in the button to clear date object | none | no |
 | on-change | Handler function that is fired on change of datetime object | none | no |
+| on-close | Handler function that is fired on close of the edit popover | none | no |
 | css-class | custom css class name for datetime presentation | predefined | no |
 
 ## Dependencies
