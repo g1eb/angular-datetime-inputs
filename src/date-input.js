@@ -14,6 +14,7 @@ directive('dateInput', ['$document', '$timeout', function ($document, $timeout) 
       minDate:'=?',
       maxDate:'=?',
       onChange: '&',
+      onClose: '&?',
       placeholder: '@',
       clearText: '@',
       cssClass:'@',
@@ -71,7 +72,10 @@ directive('dateInput', ['$document', '$timeout', function ($document, $timeout) 
           // Close edit popover
           scope.close = function () {
             scope.selected = '';
-            scope.calendar_active = false;
+
+            if ( !!scope.onClose ) {
+              scope.onClose();
+            }
           }
 
           // Bind click events outside directive to close edit popover
