@@ -265,6 +265,7 @@
   position: absolute;
   z-index: 5;
   left: -1px;
+  bottom: -2.5em;
   cursor: pointer;
   outline: none;
   border-top: 1px solid #aaa;
