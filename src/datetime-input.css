@@ -369,3 +369,44 @@
 .datetime-input.datetime .clear-button:hover::before {
   background: #ddd;
 }
+
+
+/**
+ * Close button
+ */
+.datetime-input.datetime .close-button {
+  position: absolute;
+  z-index: 5;
+  left: -1px;
+  cursor: pointer;
+  outline: none;
+  border-top: 1px solid #aaa;
+  border-left: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+  color: #777;
+  width: 25%;
+  height: auto;
+  margin-top: 10px;
+  font-size: 1.5em;
+  line-height: 2em;
+  box-sizing: border-box;
+  background-color: #efefef;
+  transition: background-color 0.25s ease-out;
+}
+.datetime-input.datetime .close-button::before {
+  content: "";
+  position: absolute;
+  right: -0.5em;
+  top: -1px;
+  width: 1em;
+  height: 2em;
+  background: #efefef;
+  border-top: 1px solid #aaa;
+  border-right: 1px solid #aaa;
+  transition: background 0.25s ease-out;
+  transform: skewX(-26deg);
+}
+.datetime-input.datetime .close-button:hover,
+.datetime-input.datetime .close-button:hover::before {
+  background: #ddd;
+}
