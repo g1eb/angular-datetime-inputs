@@ -75,7 +75,7 @@ directive('datetimeInput', ['$document', '$timeout', function ($document, $timeo
           // Close edit popover
           scope.close = function () {
             scope.selected = '';
-            scope.calendar_active = false;
+            scope.calendarActive = false;
 
             if ( !!scope.onClose ) {
               scope.onClose();

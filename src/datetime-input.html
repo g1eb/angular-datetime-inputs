@@ -8,9 +8,9 @@
   </div>
   <div class="edit-popover" ng-show="!!selected">
     <div class="header"
-      ng-click="calendar_active = !calendar_active"
+      ng-click="calendarActive = !calendarActive"
       ng-bind="selected.format('DD MMMM YYYY')"></div>
-    <div class="calendar" ng-show="!!calendar_active">
+    <div class="calendar" ng-show="!!calendarActive">
       <div class="calendar-header"
         scroll-up="calendar.add(1, 'months')"
         scroll-down="calendar.subtract(1, 'months')">
