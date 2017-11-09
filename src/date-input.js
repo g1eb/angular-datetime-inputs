@@ -13,6 +13,7 @@ directive('dateInput', ['$document', '$timeout', function ($document, $timeout) 
       dateFormat: '=?',
       minDate:'=?',
       maxDate:'=?',
+      allowClear:'=?',
       onChange: '&',
       onClose: '&?',
       placeholder: '@',

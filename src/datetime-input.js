@@ -17,6 +17,7 @@ directive('datetimeInput', ['$document', '$timeout', function ($document, $timeo
       hourStep:'=?',
       minuteStep:'=?',
       secondStep:'=?',
+      allowClear:'=?',
       onChange: '&',
       onClose: '&?',
       placeholder: '@',

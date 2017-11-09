@@ -32,7 +32,7 @@
         <div class="arrow arrow-down" ng-click="update(selected.clone().subtract(secondStep || 1, 'seconds'))"></div>
       </div>
     </div>
-    <div class="clear-button" ng-if="!!time">
+    <div class="clear-button" ng-if="!!time && allowClear">
       <div ng-click="update()" ng-bind="clearText || 'Clear'"></div>
     </div>
     <div class="close-button">

@@ -33,7 +33,7 @@
         </div>
       </div>
     </div>
-    <div class="clear-button" ng-if="!!date">
+    <div class="clear-button" ng-if="!!date && allowClear">
       <div ng-click="update()" ng-bind="clearText || 'Clear'"></div>
     </div>
     <div class="close-button">
