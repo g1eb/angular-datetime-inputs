@@ -85,3 +85,4 @@ For both date and time input:
 
 * [AngularJS](https://angularjs.org/)
 * [moment.js](http://momentjs.com/)
+* [angular-scroll-events](https://github.com/g1eb/angular-scroll-events)
