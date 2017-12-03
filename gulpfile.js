@@ -5,7 +5,7 @@ var embedTemplates = require('gulp-angular-embed-templates');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var cssnano = require('gulp-cssnano');
- 
+
 gulp.task('build', function () {
   gulp.src(['src/datetime-input.js', 'src/date-input.js', 'src/time-input.js', 'src/scroll-support.js'])
     .pipe(embedTemplates())
