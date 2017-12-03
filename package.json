@@ -1,6 +1,6 @@
 {
   "name": "angular-datetime-inputs",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "UI elements for datetime input, converted to angular directives for your convenience.",
   "homepage": "https://github.com/g1eb/angular-datetime-inputs#readme",
   "author": "gleb",
