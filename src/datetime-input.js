@@ -3,7 +3,7 @@
 /**
  * Datetime directive (date and time input element)
  */
-angular.module('g1b.datetime-inputs', []).
+angular.module('g1b.datetime-inputs', ['g1b.scroll-events']).
 directive('datetimeInput', ['$document', '$timeout', function ($document, $timeout) {
   return {
     restrict: 'E',
