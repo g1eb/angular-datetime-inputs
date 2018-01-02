@@ -81,6 +81,10 @@ For both date and time input:
 | on-close | Handler function that is fired on close of the edit popover | none | no |
 | css-class | custom css class name for datetime presentation | none | no |
 
+## Datetime range
+
+If you are looking for a range input of datetime objects, check out [angular-datetime-range](https://github.com/g1eb/angular-datetime-range)
+
 ## Dependencies
 
 * [AngularJS](https://angularjs.org/)
