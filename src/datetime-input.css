@@ -216,7 +216,8 @@
   transition: background-color 0.25s ease-out;
 }
 .datetime-input.datetime .calendar .calendar-body .week .date.current {
-  color: #444;
+  color: #555;
+  font-weight: 900;
 }
 .datetime-input.datetime .calendar .calendar-body .week .date:not(.active):hover {
   background-color: #ddd;
