@@ -71,9 +71,9 @@ For both date and time input:
 | time-format | [moment.js compatible time format](https://momentjs.com/docs/#/displaying/format/) used for display in time and datetime input directives | 'HH : mm : ss' | no |
 | min-date | moment.js datetime object min datetime | none | no |
 | max-date | moment.js datetime object max datetime | none | no |
-| hourStep | step size for hour input | 1 | no |
-| minuteStep | step size for minute input | 1 | no |
-| secondStep | step size for second input | 1 | no |
+| hour-step | step size for hour input | 1 | no |
+| minute-step | step size for minute input | 1 | no |
+| second-step | step size for second input | 1 | no |
 | placeholder | Placeholder is shown when input object is undefined | none | no |
 | allowClear | Allow users to clear selected datetime value | false | no |
 | clearText | Clear text shown in the button to clear date object | Clear | no |
