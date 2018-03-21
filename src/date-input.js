@@ -88,6 +88,15 @@ directive('dateInput', ['$document', '$timeout', function ($document, $timeout) 
               });
             }
           });
+
+          // Bind 'esc' keyup event to close edit popover
+          $document.on('keyup', function (e) {
+            if ( !!scope.selected && e.keyCode === 27) {
+              scope.$apply(function () {
+                scope.close();
+              });
+            }
+          });
         }
       };
     }
