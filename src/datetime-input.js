@@ -22,6 +22,7 @@ directive('datetimeInput', ['$document', '$timeout', function ($document, $timeo
       onClose: '&?',
       placeholder: '@',
       clearText: '@',
+      closeText: '@',
       cssClass:'@',
     },
     replace: true,

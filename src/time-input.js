@@ -21,6 +21,7 @@ directive('timeInput', ['$document', '$timeout', function ($document, $timeout) 
       onClose: '&?',
       placeholder: '@',
       clearText: '@',
+      closeText: '@',
       cssClass:'@',
     },
     replace: true,
