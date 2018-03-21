@@ -75,8 +75,8 @@ For both date and time input:
 | minute-step | step size for minute input | 1 | no |
 | second-step | step size for second input | 1 | no |
 | placeholder | Placeholder is shown when input object is undefined | none | no |
-| allowClear | Allow users to clear selected datetime value | false | no |
-| clearText | Clear text shown in the button to clear date object | Clear | no |
+| allow-clear | Allow users to clear selected datetime value | false | no |
+| clear-text | Clear text shown in the button to clear date object | Clear | no |
 | on-change | Handler function that is fired on change of datetime object | none | no |
 | on-close | Handler function that is fired on close of the edit popover | none | no |
 | css-class | custom css class name for datetime presentation | none | no |
