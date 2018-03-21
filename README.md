@@ -74,11 +74,12 @@ For both date and time input:
 | hour-step | step size for hour input | 1 | no |
 | minute-step | step size for minute input | 1 | no |
 | second-step | step size for second input | 1 | no |
-| placeholder | Placeholder is shown when input object is undefined | none | no |
-| allow-clear | Allow users to clear selected datetime value | false | no |
-| clear-text | Clear text shown in the button to clear date object | Clear | no |
 | on-change | Handler function that is fired on change of datetime object | none | no |
 | on-close | Handler function that is fired on close of the edit popover | none | no |
+| placeholder | Placeholder is shown when input object is undefined | none | no |
+| allow-clear | Allow users to clear selected datetime value | false | no |
+| clear-text | Clear text shown in the button used to clear date object | Clear | no |
+| close-text | Close text shown in the button used to close edit popover | Close | no |
 | css-class | custom css class name for datetime presentation | none | no |
 
 ## Datetime range
